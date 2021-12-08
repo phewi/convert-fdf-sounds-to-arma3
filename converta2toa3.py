@@ -1,17 +1,169 @@
 #!/usr/bin/python3
 import os
 from moviepy.editor import concatenate_audioclips, AudioFileClip
+from pathlib import Path
 
 #TODO
 #Directioncompass2 äänitiedostojen luominen, 25kpl suunta + numerot
 #DEFAULT-setin ContactE voisi olla contact-folderin perusta
 
 # config
-A2_DIR = "/mnt/g/arma3projects/a2toa3/src/Male02FI/"
-A3_DIR = "/mnt/g/arma3projects/a2toa3/output/Male02FIN/"
+#A2_DIR = "/mnt/c/a2toa3/src/Male02FI/"
+A2_DIR = "C:\\a2toa3\src\Male02FI/"
+#A3_DIR = "/mnt/c/a2toa3/output/Male02FIN/"
+A3_DIR = "/mnt/c/a2toa3/output/Male02FIN/"
 
 # mappings, sounds not applicable for arma3 are commented out
 # format Sourcefilename:foldercode:newname, (new name is 0 if no change needed
+DIRS_Combat = {
+"010_Vehicles",
+"015_Targeting",
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"035_NumbersGrid",
+"040_MoveDistanceAbsolute1",
+"070_MoveDirectionRelative1",
+"100_Commands",
+"110_Com_Announce",
+"130_Com_Reply",
+"200_CombatShouts",
+"DirectionCompass1",
+"DirectionRelative1",
+"DirectionRelative2",
+"DirectionRelative3",
+"DistanceAbsolute1",
+}
+
+DIRS_CombatContact = {
+"010_Vehicles"
+}
+
+DIRS_CombatEngage = {
+"010_Vehicles",
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"035_NumbersGrid",
+"DirectionCompass1",
+"DirectionRelative1",
+"DirectionRelative2",
+"DirectionRelative3",
+"DistanceAbsolute1",
+}
+
+DIRS_Normal = {
+"005_Weapons",
+"010_Vehicles",
+"015_Targeting",
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"035_NumbersGrid",
+"040_MoveDistanceAbsolute1",
+"070_MoveDirectionRelative1",
+"080_MoveAlphabet",
+"090_MoveLocations",
+"100_Commands",
+"110_Com_Announce",
+"120_Com_Ask",
+"130_Com_Reply",
+"140_Com_Status",
+"150_Reporting",
+"220_Support",
+"230_GenericRadioMessages",
+"DirectionCompass1",
+"DirectionCompass2",
+"DirectionRelative1",
+"DirectionRelative2",
+"DirectionRelative3",
+"DistanceAbsolute1",
+}
+
+DIRS_NormalContact = {
+"010_Vehicles",
+}
+
+DIRS_NormalEngage = {
+"010_Vehicles",
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"035_NumbersGrid",
+"DirectionCompass1",
+"DirectionRelative1",
+"DirectionRelative2",
+"DirectionRelative3",
+"DistanceAbsolute1",
+}
+
+DIRS_NormalTarget = {
+"010_Vehicles",
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"035_NumbersGrid",
+"DirectionCompass1",
+"DirectionRelative1",
+"DirectionRelative2",
+"DirectionRelative3",
+"DistanceAbsolute1",
+}
+
+DIRS_NormalWatch = {
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"DirectionCompass1",
+}
+
+DIRS_Stealth = {
+"010_Vehicles",
+"015_Targeting",
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"035_NumbersGrid",
+"040_MoveDistanceAbsolute1",
+"070_MoveDirectionRelative1",
+"080_MoveAlphabet",
+"090_MoveLocations",
+"100_Commands",
+"110_Com_Announce",
+"120_Com_Ask",
+"130_Com_Reply",
+"140_Com_Status",
+"150_Reporting",
+"200_CombatShouts",
+"220_Support",
+"DirectionCompass1",
+"DirectionCompass2",
+"DirectionRelative1",
+"DirectionRelative2",
+"DirectionRelative3",
+"DistanceAbsolute1",
+}
+
+
+DIRS_StealthEngage = {
+"010_Vehicles",
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"035_NumbersGrid",
+"DirectionCompass1",
+"DirectionRelative1",
+"DirectionRelative2",
+"DirectionRelative3",
+"DistanceAbsolute1",
+}
+
+DIRS_StealthWatch = {
+"020_Names",
+"025_Numbers",
+"030_Teams",
+"DirectionCompass1",
+}
 
 DEFAULT_000_Unused = {
 #"And":,ja 
@@ -766,6 +918,10 @@ def convert_clockfacing():
                 os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/" + s + "/DirectionRelative2/")
                 os.system("cp " + A2_DIR + "default/clockfacing/" + original_file + ext + " " + A3_DIR + "RadioProtocolENG/" + s + "/" +  renamed_file + ext)
 
+#TODO yhtenäistä konversiofunktio
+#			
+
+
 
 def concat_alphabets():
 	os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/Normal/080_MoveAlphabet/")
@@ -805,6 +961,31 @@ def movefiles():
 def convert_005_Weapons():
 	print("converting weapons")
 
+def makedirs():
+	filename= Path(A2_DIR + "default/Advance.ogg")
+	if filename.exists():
+		print(filename)
+	'''for a in DIRS_Combat:
+		print(a)
+		DIRS_Combat
+		DIRS_CombatContact
+		DIRS_CombatEngage
+		DIRS_Normal
+		DIRS_NormalContact
+		DIRS_NormalEngage
+		DIRS_NormalTarget
+		DIRS_NormalWatch
+		DIRS_Stealth
+		DIRS_StealthEngage
+		DIRS_StealthWatch'''
+
+
+#todo 
+def convert(sources, states):
+	for state in states:
+		for file in sources:
+			print(state + " ja " + file)
+	
 #checkdirs()
 #concat_alphabets()
 #movefiles()
@@ -812,4 +993,6 @@ def convert_005_Weapons():
 #convert_005_Weapons()
 #concat_combatengages()
 #concat_numbersgrid()
+#convert(DEFAULT_100_Commands, STATES_ALL)
+makedirs()
 print("All done!")
