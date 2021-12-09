@@ -3,15 +3,15 @@ import os
 from moviepy.editor import concatenate_audioclips, AudioFileClip
 from pathlib import Path
 
-#TODO
+# TODO
 #Directioncompass2 äänitiedostojen luominen, 25kpl suunta + numerot
-#DEFAULT-setin ContactE voisi olla contact-folderin perusta
+# DEFAULT-setin ContactE voisi olla contact-folderin perusta
 
 # config
-#A2_DIR = "/mnt/c/a2toa3/src/Male02FI/"
-A2_DIR = "C:\\a2toa3\src\Male02FI/"
-#A3_DIR = "/mnt/c/a2toa3/output/Male02FIN/"
-A3_DIR = "/mnt/c/a2toa3/output/Male02FIN/"
+#A2_DIR = "/mnt/c/convert-fdf-sounds-to-arma3/src/Male02FI/"
+#A3_DIR = "/mnt/c/convert-fdf-sounds-to-arma3/output/Male02FIN/"
+A2_DIR = "C:\\c\convert-fdf-sounds-to-arma3\src\Male02FI/"
+A3_DIR = "C:\\c\convert-fdf-sounds-to-arma3/output/Male02FIN/"
 
 # mappings, sounds not applicable for arma3 are commented out
 # format Sourcefilename:foldercode:newname, (new name is 0 if no change needed
