@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import os
 import argparse
+import shutil
 from moviepy.editor import concatenate_audioclips, AudioFileClip
 from pathlib import Path
 
@@ -178,7 +179,7 @@ DIRS_StealthWatch = {
 DEFAULT_000_Unused = {
 #"And":,ja 
 #"AttackThat":,tuhotkaa tuo
-#"BailOutE":,ulos äkkiä!
+#"BailOutE":,ulos äkkiä!COMBAT
 #"BeAdvised":,huomio
 #"Are":,ootta
 #"AtEase":,raauhassa
@@ -199,8 +200,6 @@ DEFAULT_000_Unused = {
 #"ImAtGrid":,olen karttaruudussa
 #"IsHistory":,on tuhottu
 #"Is":,ON!
-#"LasersOff":,laaserit pois
-#"LasersOn":,laaserit päälle
 #"ListenUp":,olkaas kuulolla
 #"Loader":,lataajaksi
 #"Move":,menkää kohteeseen
@@ -244,26 +243,26 @@ DEFAULT_020_Names = {}
 DEFAULT_025_Numbers = {}
 DEFAULT_030_Teams = {}
 NUMBERS_MOVE_035_NumbersGrid = {
-"grid_move_to_eight_1",
-"grid_move_to_eight_2",
-"grid_move_to_five_1",
-"grid_move_to_five_2",
-"grid_move_to_four_1",
-"grid_move_to_four_2",
-"grid_move_to_nine_1",
-"grid_move_to_nine_2",
-"grid_move_to_one_1",
-"grid_move_to_one_2",
-"grid_move_to_seven_1",
-"grid_move_to_seven_2",
-"grid_move_to_six_1",
-"grid_move_to_six_2",
-"grid_move_to_three_1",
-"grid_move_to_three_2",
-"grid_move_to_two_1",
-"grid_move_to_two_2",
-"grid_move_to_zero_1",
-"grid_move_to_zero_2",
+"eight":"grid_move_to_eight_1",
+"eight":"grid_move_to_eight_2",
+"five":"grid_move_to_five_1",
+"five":"grid_move_to_five_2",
+"four":"grid_move_to_four_1",
+"four":"grid_move_to_four_2",
+"nine":"grid_move_to_nine_1",
+"nine":"grid_move_to_nine_2",
+"one":"grid_move_to_one_1",
+"one":"grid_move_to_one_2",
+"seven":"grid_move_to_seven_1",
+"seven":"grid_move_to_seven_2",
+"six":"grid_move_to_six_1",
+"six":"grid_move_to_six_2",
+"three":"grid_move_to_three_1",
+"three":"grid_move_to_three_2",
+"two":"grid_move_to_two_1",
+"two":"grid_move_to_two_2",
+"zero":"grid_move_to_zero_1",
+"zero":"grid_move_to_zero_2",
 }
 NUMBERS_FIRST_035_NumbersGrid = {
 "eight":"grid_eight_1",
@@ -278,58 +277,58 @@ NUMBERS_FIRST_035_NumbersGrid = {
 "zero":"grid_zero_1",
 }
 NUMBERS_FIRST_035_NumbersGrid_2 = {
-"grid_eight_2",
-"grid_five_2",
-"grid_four_2",
-"grid_nine_2",
-"grid_one_2",
-"grid_seven_2",
-"grid_six_2",
-"grid_three_2",
-"grid_two_2",
-"grid_zero_2",
+"eight":"grid_eight_2",
+"five":"grid_five_2",
+"four":"grid_four_2",
+"nine":"grid_nine_2",
+"one":"grid_one_2",
+"seven":"grid_seven_2",
+"six":"grid_six_2",
+"three":"grid_three_2",
+"two":"grid_two_2",
+"zero":"grid_zero_2",
 }
 NUMBERS_LIST_035_NumbersGrid = {
-"grid_eight_2_1",
-"grid_eight_2_2",
-"grid_eight_3_1",
-"grid_eight_3_2",
-"grid_five_2_1",
-"grid_five_2_2",
-"grid_five_3_1",
-"grid_five_3_2",
-"grid_four_2_1",
-"grid_four_2_2",
-"grid_four_3_1",
-"grid_four_3_2",
-"grid_nine_2_1",
-"grid_nine_2_2",
-"grid_nine_3_1",
-"grid_nine_3_2",
-"grid_one_2_1",
-"grid_one_2_2",
-"grid_one_3_1",
-"grid_one_3_2",
-"grid_seven_2_1",
-"grid_seven_2_2",
-"grid_seven_3_1",
-"grid_seven_3_2",
-"grid_six_2_1",
-"grid_six_2_2",
-"grid_six_3_1",
-"grid_six_3_2",
-"grid_three_2_1",
-"grid_three_2_2",
-"grid_three_3_1",
-"grid_three_3_2",
-"grid_two_2_1",
-"grid_two_2_2",
-"grid_two_3_1",
-"grid_two_3_2",
-"grid_zero_2_1",
-"grid_zero_2_2",
-"grid_zero_3_1",
-"grid_zero_3_2",
+"grid_eight_2_1":"eight",
+"grid_eight_2_2":"eight",
+"grid_eight_3_1":"eight",
+"grid_eight_3_2":"eight",
+"grid_five_2_1":"five",
+"grid_five_2_2":"five",
+"grid_five_3_1":"five",
+"grid_five_3_2":"five",
+"grid_four_2_1":"four",
+"grid_four_2_2":"four",
+"grid_four_3_1":"four",
+"grid_four_3_2":"four",
+"grid_nine_2_1":"nine",
+"grid_nine_2_2":"nine",
+"grid_nine_3_1":"nine",
+"grid_nine_3_2":"nine",
+"grid_one_2_1":"one",
+"grid_one_2_2":"one",
+"grid_one_3_1":"one",
+"grid_one_3_2":"one",
+"grid_seven_2_1":"seven",
+"grid_seven_2_2":"seven",
+"grid_seven_3_1":"seven",
+"grid_seven_3_2":"seven",
+"grid_six_2_1":"six",
+"grid_six_2_2":"six",
+"grid_six_3_1":"six",
+"grid_six_3_2":"six",
+"grid_three_2_1":"three",
+"grid_three_2_2":"three",
+"grid_three_3_1":"three",
+"grid_three_3_2":"three",
+"grid_two_2_1":"two",
+"grid_two_2_2":"two",
+"grid_two_3_1":"two",
+"grid_two_3_2":"two",
+"grid_zero_2_1":"zero",
+"grid_zero_2_2":"zero",
+"grid_zero_3_1":"zero",
+"grid_zero_3_2":"zero",
 }
 NUMBERS_035_NumbersGrid = {}
 DEFAULT_040_MoveDistanceAbsolute1 = {}
@@ -355,14 +354,14 @@ DEFAULT_100_Commands = {
 "Dismount":"100_Commands/Dismount_1",
 "Driver":"100_Commands/GetInThatVehicleDriver",
 "EjectE":"100_Commands/Eject_1",
-"EjectE":"100_Commands/Eject_2",
+#"EjectE":"100_Commands/Eject_2",
 "EngageAtWill":"100_Commands/EngageAtWill",
 "Commander":"100_Commands/GetInThatVehicleCommander",
 "CopyMyStance":"100_Commands/CopyMyStance",
 "FallBackE":"100_Commands/FallBack",
 "Fast":"100_Commands/VehFast_1",
-"Fast":"100_Commands/VehFast_2",
-"Fast":"100_Commands/VehFast_3",
+#"Fast":"100_Commands/VehFast_2",
+#"Fast":"100_Commands/VehFast_3",
 "FireAtWill":"100_Commands/FireAtWill",
 "FlankLeft":"100_Commands/FlankLeft",
 "FlankRight":"100_Commands/FlankRight",
@@ -370,7 +369,7 @@ DEFAULT_100_Commands = {
 "FlashlightsOn":"100_Commands/FlashlightsOn",
 "FormOnMeE":"100_Commands/FormOnMe",
 "Forward":"100_Commands/VehForward_1",
-"Forward":"100_Commands/VehForward_2",
+#"Forward":"100_Commands/VehForward_2",
 "FreeToEngage":"100_Commands/FreeToEngage",
 "GetDownE":"100_Commands/GoProne_1",
 "GetInThat":"100_Commands/GetInThatVehicle",
@@ -381,9 +380,11 @@ DEFAULT_100_Commands = {
 "HealThat":"100_Commands/HealThatSoldier",
 "HitTheDirt":"100_Commands/GoProne_2",
 "HoldFire":"100_Commands/HoldFire",
+"LasersOff":"100_Commands/PointersOff.ogg",
+"LasersOn":"100_Commands/PointersOn.ogg",
 "Left":"100_Commands/VehLeft_1",
-"Left":"100_Commands/VehLeft_2",
-"Left":"100_Commands/VehLeft_3",
+#"Left":"100_Commands/VehLeft_2",
+#"Left":"100_Commands/VehLeft_3",
 "LightThatFire":"100_Commands/LightThatFire",
 "ManualFire":"100_Commands/ManualFire_1",
 "ManualFire":"100_Commands/ManualFire_2",
@@ -869,11 +870,12 @@ WEAPONS = {
 
 STATES_DirectionRelative2 = {
 "Combat",
-"Normal",
 "CombatEngage",
+"Normal",
 "NormalEngage",
 "NormalTarget",
-
+"Stealth",
+"StealthEngage",
 }
 STATES_ALL = {
 "Combat",
@@ -909,6 +911,13 @@ def concatenate_audio_moviepy(path1, path2, output_path):
 	final_clip = concatenate_audioclips([first,last])
 	final_clip.write_audiofile(output_path)
 
+def concatenate_audio_moviepy_three(path1, path2, path3, output_path):
+	first = AudioFileClip(path1) 
+	second = AudioFileClip(path2)
+	third = AudioFileClip(path3)
+	final_clip = concatenate_audioclips([first,second,third])
+	final_clip.write_audiofile(output_path)
+
 def checkdirs():
     print("Checking directories")
     global DIR_CHECK_RESULT
@@ -921,12 +930,11 @@ def checkdirs():
 
 
 
-def convert_clockfacing():
+def copy_clockfacing():
     for ext in FILETYPES:
         for s in STATES_DirectionRelative2:
             for original_file, renamed_file in CLOCKFACING_DirectionRelative2.items():
-                os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/" + s + "/DirectionRelative2/")
-                os.system("cp " + A2_DIR + "default/clockfacing/" + original_file + ext + " " + A3_DIR + "RadioProtocolENG/" + s + "/" +  renamed_file + ext)
+                shutil.copyfile(A2_DIR + "default/clockfacing/" + original_file + ext,A3_DIR + "RadioProtocolENG/" + s + "/" +  renamed_file + ext)
 
 #TODO yhtenäistä konversiofunktio
 #			
@@ -952,21 +960,30 @@ def concat_combatengages():
 
 def concat_numbersgrid():
 	for state in STATES_NUMBERSGRID:
-		os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/")
+		#todo make the concats run only once and copy files to all the destionations
 		for n, m in NUMBERS_FIRST_035_NumbersGrid.items():
-			start = A2_DIR + "default/Grid.ogg"
-			end = A2_DIR + "default/numbers/"+ n + ".ogg"
+			grid = A2_DIR + "default/Grid.ogg"
+			number = A2_DIR + "default/numbers/"+ n + ".ogg"
 			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + m + ".ogg"
-			concatenate_audio_moviepy(start, end, output)
-	#TODO muutkin kuin ekat numerot
-	
-def movefiles(src,dst):
-    if DIR_CHECK_RESULT == 1:
-        print("OK, default and stealth folders exist")
-        #global convert_direction()
+			concatenate_audio_moviepy(grid, number, output)
+		for n, m in NUMBERS_FIRST_035_NumbersGrid_2.items():
+			grid = A2_DIR + "default/Grid.ogg"
+			number = A2_DIR + "default/numbers/"+ n + ".ogg"
+			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + m + ".ogg"
+			concatenate_audio_moviepy(grid, number, output)
+		for n, m in NUMBERS_MOVE_035_NumbersGrid.items():
+			moveto = A2_DIR + "default/MoveTo.ogg"
+			grid = A2_DIR + "default/Grid.ogg"
+			number = A2_DIR + "default/numbers/"+ n + ".ogg"
+			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + m + ".ogg"
+			concatenate_audio_moviepy_three(moveto, grid, number, output)
+		for n, m in NUMBERS_LIST_035_NumbersGrid.items():
+			number = A2_DIR + "default/numbers/"+ m + ".ogg"
+			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + n + ".ogg"
+			shutil.copyfile(number,output)
 
-    else:
-        print("directory structure check fail")
+#def movefile(set, states):
+	    
 
 def convert_005_Weapons():
 	print("converting weapons")
@@ -978,45 +995,30 @@ def fileexists():
 
 def createdirs(*arg):
 #TODO make this not suck
+	global A3_DIR
+	destdir = A3_DIR + "RadioProtocolENG/"
 	for n in arg[0]:
-		os.makedirs(A3_DIR + "Combat/" + n)
+		os.makedirs(destdir + "Combat/" + n)
 	for n in arg[1]:
-		os.makedirs(A3_DIR + "CombatContact/" + n)
+		os.makedirs(destdir + "CombatContact/" + n)
 	for n in arg[2]:
-		os.makedirs(A3_DIR + "CombatEngage/" + n)
+		os.makedirs(destdir + "CombatEngage/" + n)
 	for n in arg[3]:
-		os.makedirs(A3_DIR + "Normal/" + n)
+		os.makedirs(destdir + "Normal/" + n)
 	for n in arg[4]:
-		os.makedirs(A3_DIR + "NormalContact/" + n)
+		os.makedirs(destdir + "NormalContact/" + n)
 	for n in arg[5]:
-		os.makedirs(A3_DIR + "NormalEngage/" + n)
+		os.makedirs(destdir + "NormalEngage/" + n)
 	for n in arg[6]:
-		os.makedirs(A3_DIR + "NormalTarget/" + n)
+		os.makedirs(destdir + "NormalTarget/" + n)
 	for n in arg[7]:
-		os.makedirs(A3_DIR + "NormalWatch/" + n)
+		os.makedirs(destdir + "NormalWatch/" + n)
 	for n in arg[8]:
-		os.makedirs(A3_DIR + "Stealth/" + n)
+		os.makedirs(destdir + "Stealth/" + n)
 	for n in arg[9]:
-		os.makedirs(A3_DIR + "StealthEngage/" + n)
+		os.makedirs(destdir + "StealthEngage/" + n)
 	for n in arg[10]:
-		os.makedirs(A3_DIR + "StealthWatch/" + n)
-
-'''def createdirs(a,b,c):
-		for n in args:
-			print(n)
-		print(b)
-		print("combatcontact: " + b)
-		print("combatengage: " + c)
-		print("combatengage: " + d)
-		print("combatengage: " + e)
-		print("combatengage: " + f)
-		print("combatengage: " + g)
-		print("combatengage: " + h)
-		print("combatengage: " + i)
-		print("combatengage: " + j)
-		print("combatengage: " + k)'''
-
-
+		os.makedirs(destdir + "StealthWatch/" + n)
 
 #todo 
 def convert(sources, states):
@@ -1024,14 +1026,20 @@ def convert(sources, states):
 		for file in sources:
 			print(state + " ja " + file)
 	
-#checkdirs()
+createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage, DIRS_Normal, DIRS_NormalContact, DIRS_NormalEngage, DIRS_NormalTarget, DIRS_NormalWatch, DIRS_Stealth, DIRS_StealthEngage, DIRS_StealthWatch)
+
+
 #concat_alphabets()
+
+#checkdirs()
 #movefile()
-#convert_clockfacing()
+#copy_clockfacing()
 #convert_005_Weapons()
 #concat_combatengages()
-#concat_numbersgrid()
+
 #convert(DEFAULT_100_Commands, STATES_ALL)
-createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage, DIRS_Normal, DIRS_NormalContact, DIRS_NormalEngage, DIRS_NormalTarget, DIRS_NormalWatch, DIRS_Stealth, DIRS_StealthEngage, DIRS_StealthWatch)
-#createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage)
+
+#working funcions under this line 
+
+concat_numbersgrid()
 print("All done!")
