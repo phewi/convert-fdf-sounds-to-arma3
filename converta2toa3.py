@@ -1,20 +1,26 @@
 #!/usr/bin/python3
 import os
+import argparse
 from moviepy.editor import concatenate_audioclips, AudioFileClip
 from pathlib import Path
 
-# TODO
-#Directioncompass2 äänitiedostojen luominen, 25kpl suunta + numerot
-# DEFAULT-setin ContactE voisi olla contact-folderin perusta
-
-# config
-#A2_DIR = "/mnt/c/convert-fdf-sounds-to-arma3/src/Male02FI/"
-#A3_DIR = "/mnt/c/convert-fdf-sounds-to-arma3/output/Male02FIN/"
-A2_DIR = "C:\\c\convert-fdf-sounds-to-arma3\src\Male02FI/"
-A3_DIR = "C:\\c\convert-fdf-sounds-to-arma3/output/Male02FIN/"
+# Parse command line arguments, fail if none provided
+parser = argparse.ArgumentParser(description='Convert arma 2 to arma 3')
+parser.add_argument('--input', type=str, help='input directory, the one containing the \'default\' and \'stealth\' folders')
+parser.add_argument('--output', type=str, help='output directory')
+args = parser.parse_args()
+if args.input and args.output:
+	A2_DIR = args.input
+	A3_DIR = args.output
+else:
+    parser.error('Invalid options provided.')
 
 # mappings, sounds not applicable for arma3 are commented out
-# format Sourcefilename:foldercode:newname, (new name is 0 if no change needed
+'''
+'DIRS_' 				directories created in createdirs()
+'DEFAULT_'				sound files with source in the default folder of input or it's subfolder
+'''
+# DIRS_
 DIRS_Combat = {
 "010_Vehicles",
 "015_Targeting",
@@ -165,6 +171,10 @@ DIRS_StealthWatch = {
 "DirectionCompass1",
 }
 
+
+#The format is "sourcefilename":"destionationfilename", 
+#
+#Files without destination are commented out
 DEFAULT_000_Unused = {
 #"And":,ja 
 #"AttackThat":,tuhotkaa tuo
@@ -228,8 +238,8 @@ DEFAULT_015_Targeting = {
 "Fire":"Fire_1",
 "NoTarget":"NoTarget_1",
 "NoTarget":"NoTarget_2",
-
 }
+
 DEFAULT_020_Names = {}
 DEFAULT_025_Numbers = {}
 DEFAULT_030_Teams = {}
@@ -950,7 +960,7 @@ def concat_numbersgrid():
 			concatenate_audio_moviepy(start, end, output)
 	#TODO muutkin kuin ekat numerot
 	
-def movefiles():
+def movefiles(src,dst):
     if DIR_CHECK_RESULT == 1:
         print("OK, default and stealth folders exist")
         #global convert_direction()
@@ -961,23 +971,51 @@ def movefiles():
 def convert_005_Weapons():
 	print("converting weapons")
 
-def makedirs():
+def fileexists():
 	filename= Path(A2_DIR + "default/Advance.ogg")
 	if filename.exists():
 		print(filename)
-	'''for a in DIRS_Combat:
-		print(a)
-		DIRS_Combat
-		DIRS_CombatContact
-		DIRS_CombatEngage
-		DIRS_Normal
-		DIRS_NormalContact
-		DIRS_NormalEngage
-		DIRS_NormalTarget
-		DIRS_NormalWatch
-		DIRS_Stealth
-		DIRS_StealthEngage
-		DIRS_StealthWatch'''
+
+def createdirs(*arg):
+#TODO make this not suck
+	for n in arg[0]:
+		os.makedirs(A3_DIR + "Combat/" + n)
+	for n in arg[1]:
+		os.makedirs(A3_DIR + "CombatContact/" + n)
+	for n in arg[2]:
+		os.makedirs(A3_DIR + "CombatEngage/" + n)
+	for n in arg[3]:
+		os.makedirs(A3_DIR + "Normal/" + n)
+	for n in arg[4]:
+		os.makedirs(A3_DIR + "NormalContact/" + n)
+	for n in arg[5]:
+		os.makedirs(A3_DIR + "NormalEngage/" + n)
+	for n in arg[6]:
+		os.makedirs(A3_DIR + "NormalTarget/" + n)
+	for n in arg[7]:
+		os.makedirs(A3_DIR + "NormalWatch/" + n)
+	for n in arg[8]:
+		os.makedirs(A3_DIR + "Stealth/" + n)
+	for n in arg[9]:
+		os.makedirs(A3_DIR + "StealthEngage/" + n)
+	for n in arg[10]:
+		os.makedirs(A3_DIR + "StealthWatch/" + n)
+
+'''def createdirs(a,b,c):
+		for n in args:
+			print(n)
+		print(b)
+		print("combatcontact: " + b)
+		print("combatengage: " + c)
+		print("combatengage: " + d)
+		print("combatengage: " + e)
+		print("combatengage: " + f)
+		print("combatengage: " + g)
+		print("combatengage: " + h)
+		print("combatengage: " + i)
+		print("combatengage: " + j)
+		print("combatengage: " + k)'''
+
 
 
 #todo 
@@ -988,11 +1026,12 @@ def convert(sources, states):
 	
 #checkdirs()
 #concat_alphabets()
-#movefiles()
+#movefile()
 #convert_clockfacing()
 #convert_005_Weapons()
 #concat_combatengages()
 #concat_numbersgrid()
 #convert(DEFAULT_100_Commands, STATES_ALL)
-makedirs()
+createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage, DIRS_Normal, DIRS_NormalContact, DIRS_NormalEngage, DIRS_NormalTarget, DIRS_NormalWatch, DIRS_Stealth, DIRS_StealthEngage, DIRS_StealthWatch)
+#createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage)
 print("All done!")
