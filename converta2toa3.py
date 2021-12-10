@@ -12,7 +12,7 @@ parser.add_argument('--output', type=str, help='output directory')
 args = parser.parse_args()
 if args.input and args.output:
 	A2_DIR = args.input
-	A3_DIR = args.output
+	A3_DIR = args.output + "RadioProtocolENG/"
 else:
     parser.error('Invalid options provided.')
 
@@ -22,155 +22,17 @@ else:
 'DEFAULT_'				sound files with source in the default folder of input or it's subfolder
 '''
 # DIRS_
-DIRS_Combat = {
-"010_Vehicles",
-"015_Targeting",
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"035_NumbersGrid",
-"040_MoveDistanceAbsolute1",
-"070_MoveDirectionRelative1",
-"100_Commands",
-"110_Com_Announce",
-"130_Com_Reply",
-"200_CombatShouts",
-"DirectionCompass1",
-"DirectionRelative1",
-"DirectionRelative2",
-"DirectionRelative3",
-"DistanceAbsolute1",
-}
-
-DIRS_CombatContact = {
-"010_Vehicles"
-}
-
-DIRS_CombatEngage = {
-"010_Vehicles",
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"035_NumbersGrid",
-"DirectionCompass1",
-"DirectionRelative1",
-"DirectionRelative2",
-"DirectionRelative3",
-"DistanceAbsolute1",
-}
-
-DIRS_Normal = {
-"005_Weapons",
-"010_Vehicles",
-"015_Targeting",
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"035_NumbersGrid",
-"040_MoveDistanceAbsolute1",
-"070_MoveDirectionRelative1",
-"080_MoveAlphabet",
-"090_MoveLocations",
-"100_Commands",
-"110_Com_Announce",
-"120_Com_Ask",
-"130_Com_Reply",
-"140_Com_Status",
-"150_Reporting",
-"220_Support",
-"230_GenericRadioMessages",
-"DirectionCompass1",
-"DirectionCompass2",
-"DirectionRelative1",
-"DirectionRelative2",
-"DirectionRelative3",
-"DistanceAbsolute1",
-}
-
-DIRS_NormalContact = {
-"010_Vehicles",
-}
-
-DIRS_NormalEngage = {
-"010_Vehicles",
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"035_NumbersGrid",
-"DirectionCompass1",
-"DirectionRelative1",
-"DirectionRelative2",
-"DirectionRelative3",
-"DistanceAbsolute1",
-}
-
-DIRS_NormalTarget = {
-"010_Vehicles",
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"035_NumbersGrid",
-"DirectionCompass1",
-"DirectionRelative1",
-"DirectionRelative2",
-"DirectionRelative3",
-"DistanceAbsolute1",
-}
-
-DIRS_NormalWatch = {
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"DirectionCompass1",
-}
-
-DIRS_Stealth = {
-"010_Vehicles",
-"015_Targeting",
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"035_NumbersGrid",
-"040_MoveDistanceAbsolute1",
-"070_MoveDirectionRelative1",
-"080_MoveAlphabet",
-"090_MoveLocations",
-"100_Commands",
-"110_Com_Announce",
-"120_Com_Ask",
-"130_Com_Reply",
-"140_Com_Status",
-"150_Reporting",
-"200_CombatShouts",
-"220_Support",
-"DirectionCompass1",
-"DirectionCompass2",
-"DirectionRelative1",
-"DirectionRelative2",
-"DirectionRelative3",
-"DistanceAbsolute1",
-}
-
-
-DIRS_StealthEngage = {
-"010_Vehicles",
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"035_NumbersGrid",
-"DirectionCompass1",
-"DirectionRelative1",
-"DirectionRelative2",
-"DirectionRelative3",
-"DistanceAbsolute1",
-}
-
-DIRS_StealthWatch = {
-"020_Names",
-"025_Numbers",
-"030_Teams",
-"DirectionCompass1",
-}
+DIRS_Combat = {"010_Vehicles","015_Targeting","020_Names","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","100_Commands","110_Com_Announce","130_Com_Reply","200_CombatShouts","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1",}
+DIRS_CombatContact = {"010_Vehicles"}
+DIRS_CombatEngage = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1",}
+DIRS_Normal = {"005_Weapons","010_Vehicles","015_Targeting","020_Names","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","080_MoveAlphabet","090_MoveLocations","100_Commands","110_Com_Announce","120_Com_Ask","130_Com_Reply","140_Com_Status","150_Reporting","220_Support","230_GenericRadioMessages","DirectionCompass1","DirectionCompass2","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_NormalContact = {"010_Vehicles"}
+DIRS_NormalEngage = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_NormalTarget = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_NormalWatch = {"020_Names","025_Numbers","030_Teams","DirectionCompass1"}
+DIRS_Stealth = {"010_Vehicles","015_Targeting","020_Names","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","080_MoveAlphabet","090_MoveLocations","100_Commands","110_Com_Announce","120_Com_Ask","130_Com_Reply","140_Com_Status","150_Reporting","200_CombatShouts","220_Support","DirectionCompass1","DirectionCompass2","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_StealthEngage = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_StealthWatch = {"020_Names","025_Numbers","030_Teams","DirectionCompass1"}
 
 
 #The format is "sourcefilename":"destionationfilename", 
@@ -228,65 +90,65 @@ DEFAULT_005_Weapons = {}
 DEFAULT_010_Vehicles = {}
 DEFAULT_015_Targeting = {
 "AttackE":"Attack_1",
-"AttackE":"Attack_2",
+#"AttackE":"Attack_2",
 "CancelTarget":"CancelTarget_1",
-"CancelTarget":"CancelTarget_2",
+#"CancelTarget":"CancelTarget_2",
 "EngageE":"Engage_1",
-"EngageThat":"Engage_2",
+#"EngageThat":"Engage_2",
 "FireE":"Fire_2",
-"Fire":"Fire_1",
+#"Fire":"Fire_1",
 "NoTarget":"NoTarget_1",
-"NoTarget":"NoTarget_2",
+#"NoTarget":"NoTarget_2",
 }
 
-DEFAULT_020_Names = {}
-DEFAULT_025_Numbers = {}
+#no fdf DEFAULT_020_Names = {}
+#no fdf DEFAULT_025_Numbers = {}
 DEFAULT_030_Teams = {}
 NUMBERS_MOVE_035_NumbersGrid = {
-"eight":"grid_move_to_eight_1",
-"eight":"grid_move_to_eight_2",
-"five":"grid_move_to_five_1",
-"five":"grid_move_to_five_2",
-"four":"grid_move_to_four_1",
-"four":"grid_move_to_four_2",
-"nine":"grid_move_to_nine_1",
-"nine":"grid_move_to_nine_2",
-"one":"grid_move_to_one_1",
-"one":"grid_move_to_one_2",
-"seven":"grid_move_to_seven_1",
-"seven":"grid_move_to_seven_2",
-"six":"grid_move_to_six_1",
-"six":"grid_move_to_six_2",
-"three":"grid_move_to_three_1",
-"three":"grid_move_to_three_2",
-"two":"grid_move_to_two_1",
-"two":"grid_move_to_two_2",
-"zero":"grid_move_to_zero_1",
-"zero":"grid_move_to_zero_2",
+"grid_move_to_eight_1":"eight",
+"grid_move_to_eight_2":"eight",
+"grid_move_to_five_1":"five",
+"grid_move_to_five_2":"five",
+"grid_move_to_four_1":"four",
+"grid_move_to_four_2":"four",
+"grid_move_to_nine_1":"nine",
+"grid_move_to_nine_2":"nine",
+"grid_move_to_one_1":"one",
+"grid_move_to_one_2":"one",
+"grid_move_to_seven_1":"seven",
+"grid_move_to_seven_2":"seven",
+"grid_move_to_six_1":"six",
+"grid_move_to_six_2":"six",
+"grid_move_to_three_1":"three",
+"grid_move_to_three_2":"three",
+"grid_move_to_two_1":"two",
+"grid_move_to_two_2":"two",
+"grid_move_to_zero_1":"zero",
+"grid_move_to_zero_2":"zero",
 }
 NUMBERS_FIRST_035_NumbersGrid = {
-"eight":"grid_eight_1",
-"five":"grid_five_1",
-"four":"grid_four_1",
-"nine":"grid_nine_1",
-"one":"grid_one_1",
-"seven":"grid_seven_1",
-"six":"grid_six_1",
-"three":"grid_three_1",
-"two":"grid_two_1",
-"zero":"grid_zero_1",
+"grid_eight_1":"eight",
+"grid_five_1":"five",
+"grid_four_1":"four",
+"grid_nine_1":"nine",
+"grid_one_1":"one",
+"grid_seven_1":"seven",
+"grid_six_1":"six",
+"grid_three_1":"three",
+"grid_two_1":"two",
+"grid_zero_1":"zero",
 }
 NUMBERS_FIRST_035_NumbersGrid_2 = {
-"eight":"grid_eight_2",
-"five":"grid_five_2",
-"four":"grid_four_2",
-"nine":"grid_nine_2",
-"one":"grid_one_2",
-"seven":"grid_seven_2",
-"six":"grid_six_2",
-"three":"grid_three_2",
-"two":"grid_two_2",
-"zero":"grid_zero_2",
+"grid_eight_2":"eight",
+"grid_five_2":"five",
+"grid_four_2":"four",
+"grid_nine_2":"nine",
+"grid_one_2":"one",
+"grid_seven_2":"seven",
+"grid_six_2":"six",
+"grid_three_2":"three",
+"grid_two_2":"two",
+"grid_zero_2":"zero",
 }
 NUMBERS_LIST_035_NumbersGrid = {
 "grid_eight_2_1":"eight",
@@ -867,57 +729,36 @@ WEAPONS = {
 "Rockets":"005_Weapons/Rockets",
 "Mine":"150_Reporting/MineDetected",
 }
+TWICE = {"_1","_2"}
+FILETYPES = {".ogg",".lip"}
 
-STATES_DirectionRelative2 = {
-"Combat",
-"CombatEngage",
-"Normal",
-"NormalEngage",
-"NormalTarget",
-"Stealth",
-"StealthEngage",
-}
-STATES_ALL = {
-"Combat",
-"CombatContact",
-"CombatEngage",
-"Normal",
-"NormalContact",
-"NormalEngage",
-"NormalTarget",
-"NormalWatch",
-"Stealth",
-"StealthEngage"
-"StealthWatch"
-}
-STATES_COMBAT = {}
-STATES_NORMAL = {}
-STATES_STEALTH = {}
-STATES_ENGAGE = {"NormalEngage","CombatEngage",}
-STATES_NUMBERSGRID = {"Combat","CombatEngage","Normal","NormalEngage","Stealth","StealthEngage",}
-TWICE = {
-"_1",
-"_2"
-}
+#states by states
+STATES_ALL = {"Combat","CombatContact","CombatEngage","Normal","NormalContact","NormalEngage","NormalTarget","NormalWatch","Stealth","StealthEngage","StealthWatch"}
+STATES_COMBAT = {"Combat","CombatContact","CombatEngage"}
+STATES_NORMAL = {"Normal","NormalContact","NormalEngage","NormalTarget","NormalWatch"}
+STATES_STEALTH = {"Stealth","StealthEngage","StealthWatch"}
+STATES_CONTACT = {"CombatContact","NormalContact"}
+STATES_ENGAGE = {"NormalEngage","CombatEngage"}
+STATES_TARGET = {"NormalTarget"}
+STATES_WATCH = {"NormalWatch","StealthWatch"}
 
-FILETYPES = {
-".ogg",
-".lip"
-}
+#states by destination folders
+STATES_DirectionRelative2 = {"Combat","CombatEngage","Normal","NormalEngage","NormalTarget","Stealth","StealthEngage"}
+STATES_NUMBERSGRID = {"Combat","CombatEngage","Normal","NormalEngage","Stealth","StealthEngage"}
+STATES_TEAMS = {"Combat","CombatEngage","Normal","NormalEngage","NormalTarget","NormalWatch","Stealth","StealthEngage","StealthWatch"}
 
+#TODO yhtenäistä konversiofunktio
 def concatenate_audio_moviepy(path1, path2, output_path):
 	first = AudioFileClip(path1) 
 	last = AudioFileClip(path2)
 	final_clip = concatenate_audioclips([first,last])
 	final_clip.write_audiofile(output_path)
-
 def concatenate_audio_moviepy_three(path1, path2, path3, output_path):
 	first = AudioFileClip(path1) 
 	second = AudioFileClip(path2)
 	third = AudioFileClip(path3)
 	final_clip = concatenate_audioclips([first,second,third])
 	final_clip.write_audiofile(output_path)
-
 def checkdirs():
     print("Checking directories")
     global DIR_CHECK_RESULT
@@ -927,20 +768,11 @@ def checkdirs():
     else:
         DIR_CHECK_RESULT = 0
         return
-
-
-
 def copy_clockfacing():
     for ext in FILETYPES:
-        for s in STATES_DirectionRelative2:
+        for state in STATES_DirectionRelative2:
             for original_file, renamed_file in CLOCKFACING_DirectionRelative2.items():
-                shutil.copyfile(A2_DIR + "default/clockfacing/" + original_file + ext,A3_DIR + "RadioProtocolENG/" + s + "/" +  renamed_file + ext)
-
-#TODO yhtenäistä konversiofunktio
-#			
-
-
-
+                shutil.copyfile(A2_DIR + "default/clockfacing/" + original_file + ext,A3_DIR + state + "/" +  renamed_file + ext)
 def concat_alphabets():
 	os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/Normal/080_MoveAlphabet/")
 	for n in DEFAULT_ALPHABET:
@@ -948,7 +780,6 @@ def concat_alphabets():
 		end = A2_DIR + "default/alphabet/"+ n + ".ogg"
 		output = A3_DIR + "RadioProtocolENG/Normal/080_MoveAlphabet/" + n + ".ogg"
 		concatenate_audio_moviepy(start, end, output)
-
 def concat_combatengages():
 	for state in STATES_ENGAGE:
 		os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/" + state + "/010_Vehicles/")
@@ -957,14 +788,13 @@ def concat_combatengages():
 			end = A2_DIR + "default/vehicles/"+ n + ".ogg"
 			output = A3_DIR + "RadioProtocolENG/" + state + "/010_Vehicles/" + m + ".ogg"
 			concatenate_audio_moviepy(start, end, output)
-
-def concat_numbersgrid():
+def convert_035_NumbersGrid():
 	for state in STATES_NUMBERSGRID:
 		#todo make the concats run only once and copy files to all the destionations
 		for n, m in NUMBERS_FIRST_035_NumbersGrid.items():
 			grid = A2_DIR + "default/Grid.ogg"
-			number = A2_DIR + "default/numbers/"+ n + ".ogg"
-			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + m + ".ogg"
+			number = A2_DIR + "default/numbers/"+ m + ".ogg"
+			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + n + ".ogg"
 			concatenate_audio_moviepy(grid, number, output)
 		for n, m in NUMBERS_FIRST_035_NumbersGrid_2.items():
 			grid = A2_DIR + "default/Grid.ogg"
@@ -974,52 +804,76 @@ def concat_numbersgrid():
 		for n, m in NUMBERS_MOVE_035_NumbersGrid.items():
 			moveto = A2_DIR + "default/MoveTo.ogg"
 			grid = A2_DIR + "default/Grid.ogg"
-			number = A2_DIR + "default/numbers/"+ n + ".ogg"
-			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + m + ".ogg"
+			number = A2_DIR + "default/numbers/"+ m + ".ogg"
+			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + n + ".ogg"
 			concatenate_audio_moviepy_three(moveto, grid, number, output)
 		for n, m in NUMBERS_LIST_035_NumbersGrid.items():
 			number = A2_DIR + "default/numbers/"+ m + ".ogg"
 			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + n + ".ogg"
 			shutil.copyfile(number,output)
 
-#def movefile(set, states):
-	    
-
-def convert_005_Weapons():
-	print("converting weapons")
-
+def convert_030_Teams():
+	global A2_DIR, A3_DIR
+	for ext in FILETYPES:
+		for state in STATES_TEAMS:
+			for n, m in TEAM_030_Teams.items():
+				shutil.copyfile(A2_DIR + "default/team/" + n + ext, A3_DIR + state + "/" + m + ext)
 def fileexists():
 	filename= Path(A2_DIR + "default/Advance.ogg")
 	if filename.exists():
 		print(filename)
-
 def createdirs(*arg):
 	global A3_DIR
-	destdir = A3_DIR + "RadioProtocolENG/"
 	loop = {0:"Combat/",1:"CombatContact/",2:"CombatEngage/",3:"Normal/",4:"NormalContact/",5:"NormalEngage/",6:"NormalTarget/",7:"NormalWatch/",8:"Stealth/",9:"StealthEngage/",10:"StealthWatch/"}
 	for i, folder in loop.items():
 		for n in arg[i]:
-			os.makedirs(destdir + folder + n)
-
+			os.makedirs(A3_DIR + folder + n)
 def convert(sources, states):
+	#todo unified function for all operations? 
 	for state in states:
 		for file in sources:
 			print(state + " ja " + file)
+def convert_005_Weapons():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_015_Targeting():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_010_Vehicles():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_100_Commands():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_110_Com_Announce():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_120_Com_Ask():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_130_Com_Reply():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_140_Com_Status():
+	#todo
+	global A2_DIR, A3_DIR	
+def convert_200_CombatShouts():
+	#todo
+	global A2_DIR, A3_DIR		
+	
 	
 createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage, DIRS_Normal, DIRS_NormalContact, DIRS_NormalEngage, DIRS_NormalTarget, DIRS_NormalWatch, DIRS_Stealth, DIRS_StealthEngage, DIRS_StealthWatch)
-
+convert_030_Teams()
 
 #concat_alphabets()
 
 #checkdirs()
-#movefile()
 #copy_clockfacing()
 #convert_005_Weapons()
 #concat_combatengages()
-
 #convert(DEFAULT_100_Commands, STATES_ALL)
 
-#working funcions under this line 
+#----------working funcions under this line------------
 
-#concat_numbersgrid()
+#convert_035_NumbersGrid()
 print("All done!")
