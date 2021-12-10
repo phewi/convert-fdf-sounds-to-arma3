@@ -267,7 +267,7 @@ DEFAULT_100_Commands = {
 "SetACharge":"100_Commands/SetCharge",
 "SetTheTimer":"100_Commands/SetTheTimer",
 "Slow":"100_Commands/VehSlow_1",
-"Slow":"100_Commands/VehSlow_2",
+#"Slow":"100_Commands/VehSlow_2",
 "StayAlert":"100_Commands/StayAlert",
 "StayBack":"100_Commands/StayBack",
 "Stealth":"100_Commands/CommStealth",
@@ -773,20 +773,18 @@ def copy_clockfacing():
         for state in STATES_DirectionRelative2:
             for original_file, renamed_file in CLOCKFACING_DirectionRelative2.items():
                 shutil.copyfile(A2_DIR + "default/clockfacing/" + original_file + ext,A3_DIR + state + "/" +  renamed_file + ext)
-def concat_alphabets():
-	os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/Normal/080_MoveAlphabet/")
+def concat_080_MoveAlphabet():
 	for n in DEFAULT_ALPHABET:
 		start = A2_DIR + "default/MoveTo.ogg"
 		end = A2_DIR + "default/alphabet/"+ n + ".ogg"
-		output = A3_DIR + "RadioProtocolENG/Normal/080_MoveAlphabet/" + n + ".ogg"
+		output = A3_DIR + "Normal/" + n + ".ogg"
 		concatenate_audio_moviepy(start, end, output)
-def concat_combatengages():
+def concat_Engage_010_Vehicles():
 	for state in STATES_ENGAGE:
-		os.system("mkdir -p " + A3_DIR + "RadioProtocolENG/" + state + "/010_Vehicles/")
 		for n, m in VEHICLES_ENGAGE.items():
 			start = A2_DIR + "default/AttackThat.ogg"
 			end = A2_DIR + "default/vehicles/"+ n + ".ogg"
-			output = A3_DIR + "RadioProtocolENG/" + state + "/010_Vehicles/" + m + ".ogg"
+			output = A3_DIR + state + "/010_Vehicles/" + m + ".ogg"
 			concatenate_audio_moviepy(start, end, output)
 def convert_035_NumbersGrid():
 	for state in STATES_NUMBERSGRID:
@@ -794,22 +792,22 @@ def convert_035_NumbersGrid():
 		for n, m in NUMBERS_FIRST_035_NumbersGrid.items():
 			grid = A2_DIR + "default/Grid.ogg"
 			number = A2_DIR + "default/numbers/"+ m + ".ogg"
-			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + n + ".ogg"
+			output = A3_DIR + state + "/035_NumbersGrid/" + n + ".ogg"
 			concatenate_audio_moviepy(grid, number, output)
 		for n, m in NUMBERS_FIRST_035_NumbersGrid_2.items():
 			grid = A2_DIR + "default/Grid.ogg"
-			number = A2_DIR + "default/numbers/"+ n + ".ogg"
-			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + m + ".ogg"
+			number = A2_DIR + "default/numbers/"+ m + ".ogg"
+			output = A3_DIR + state + "/035_NumbersGrid/" + n + ".ogg"
 			concatenate_audio_moviepy(grid, number, output)
 		for n, m in NUMBERS_MOVE_035_NumbersGrid.items():
 			moveto = A2_DIR + "default/MoveTo.ogg"
 			grid = A2_DIR + "default/Grid.ogg"
 			number = A2_DIR + "default/numbers/"+ m + ".ogg"
-			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + n + ".ogg"
+			output = A3_DIR + state + "/035_NumbersGrid/" + n + ".ogg"
 			concatenate_audio_moviepy_three(moveto, grid, number, output)
 		for n, m in NUMBERS_LIST_035_NumbersGrid.items():
 			number = A2_DIR + "default/numbers/"+ m + ".ogg"
-			output = A3_DIR + "RadioProtocolENG/" + state + "/035_NumbersGrid/" + n + ".ogg"
+			output = A3_DIR + state + "/035_NumbersGrid/" + n + ".ogg"
 			shutil.copyfile(number,output)
 
 def convert_030_Teams():
@@ -863,17 +861,17 @@ def convert_200_CombatShouts():
 	
 	
 createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage, DIRS_Normal, DIRS_NormalContact, DIRS_NormalEngage, DIRS_NormalTarget, DIRS_NormalWatch, DIRS_Stealth, DIRS_StealthEngage, DIRS_StealthWatch)
-convert_030_Teams()
 
-#concat_alphabets()
+
 
 #checkdirs()
-#copy_clockfacing()
 #convert_005_Weapons()
-#concat_combatengages()
 #convert(DEFAULT_100_Commands, STATES_ALL)
 
 #----------working funcions under this line------------
-
-#convert_035_NumbersGrid()
+concat_080_MoveAlphabet()
+convert_030_Teams()
+concat_Engage_010_Vehicles()
+copy_clockfacing()
+convert_035_NumbersGrid()
 print("All done!")
