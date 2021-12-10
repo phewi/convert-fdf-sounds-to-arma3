@@ -994,33 +994,13 @@ def fileexists():
 		print(filename)
 
 def createdirs(*arg):
-#TODO make this not suck
 	global A3_DIR
 	destdir = A3_DIR + "RadioProtocolENG/"
-	for n in arg[0]:
-		os.makedirs(destdir + "Combat/" + n)
-	for n in arg[1]:
-		os.makedirs(destdir + "CombatContact/" + n)
-	for n in arg[2]:
-		os.makedirs(destdir + "CombatEngage/" + n)
-	for n in arg[3]:
-		os.makedirs(destdir + "Normal/" + n)
-	for n in arg[4]:
-		os.makedirs(destdir + "NormalContact/" + n)
-	for n in arg[5]:
-		os.makedirs(destdir + "NormalEngage/" + n)
-	for n in arg[6]:
-		os.makedirs(destdir + "NormalTarget/" + n)
-	for n in arg[7]:
-		os.makedirs(destdir + "NormalWatch/" + n)
-	for n in arg[8]:
-		os.makedirs(destdir + "Stealth/" + n)
-	for n in arg[9]:
-		os.makedirs(destdir + "StealthEngage/" + n)
-	for n in arg[10]:
-		os.makedirs(destdir + "StealthWatch/" + n)
+	loop = {0:"Combat/",1:"CombatContact/",2:"CombatEngage/",3:"Normal/",4:"NormalContact/",5:"NormalEngage/",6:"NormalTarget/",7:"NormalWatch/",8:"Stealth/",9:"StealthEngage/",10:"StealthWatch/"}
+	for i, folder in loop.items():
+		for n in arg[i]:
+			os.makedirs(destdir + folder + n)
 
-#todo 
 def convert(sources, states):
 	for state in states:
 		for file in sources:
@@ -1041,5 +1021,5 @@ createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage, DIRS_Normal, DIRS
 
 #working funcions under this line 
 
-concat_numbersgrid()
+#concat_numbersgrid()
 print("All done!")
