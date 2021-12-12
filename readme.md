@@ -20,124 +20,121 @@ Heavily in progress, probably will make a release when it's doing everything it'
 # Destination folder conversion progress
 
 - [ ] ├── Combat
-- [ ] │   ├── 010_Vehicles
-- [ ] │   ├── 015_Targeting
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
+- [x] │   ├── 010_Vehicles
+- [x] │   ├── 015_Targeting
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
 - [x] │   ├── 035_NumbersGrid
 - [ ] │   ├── 040_MoveDistanceAbsolute1
 - [ ] │   ├── 070_MoveDirectionRelative1
-- [ ] │   ├── 100_Commands
-- [ ] │   ├── 110_Com_Announce
-- [ ] │   ├── 130_Com_Reply
+- [x] │   ├── 100_Commands
+- [x] │   ├── 110_Com_Announce
+- [x] │   ├── 130_Com_Reply
 - [ ] │   ├── 200_CombatShouts
-- [ ] │   ├── DirectionCompass1
-- [ ] │   ├── DirectionRelative1
+- [x] │   ├── DirectionCompass1
+- [x] │   ├── DirectionRelative1
 - [x] │   ├── DirectionRelative2
-- [ ] │   ├── DirectionRelative3
+- [x] │   ├── DirectionRelative3
 - [ ] │   └── DistanceAbsolute1
 - [ ] ├── CombatContact
 - [ ] │   └── 010_Vehicles
 - [ ] ├── CombatEngage
 - [x] │   ├── 010_Vehicles
-- [ ] │   ├── 020_Names
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
 - [x] │   ├── 035_NumbersGrid
-- [ ] │   ├── DirectionCompass1
-- [ ] │   ├── DirectionRelative1
+- [x] │   ├── DirectionCompass1
+- [x] │   ├── DirectionRelative1
 - [x] │   ├── DirectionRelative2
-- [ ] │   ├── DirectionRelative3
+- [x] │   ├── DirectionRelative3
 - [ ] │   └── DistanceAbsolute1
 - [ ] ├── Normal
 - [ ] │   ├── 005_Weapons
-- [ ] │   ├── 010_Vehicles
-- [ ] │   ├── 015_Targeting
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
+- [x] │   ├── 010_Vehicles
+- [x] │   ├── 015_Targeting
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
 - [x] │   ├── 035_NumbersGrid
 - [ ] │   ├── 040_MoveDistanceAbsolute1
 - [ ] │   ├── 070_MoveDirectionRelative1
 - [x] │   ├── 080_MoveAlphabet
-- [ ] │   ├── 090_MoveLocations
-- [ ] │   ├── 100_Commands
-- [ ] │   ├── 110_Com_Announce
-- [ ] │   ├── 120_Com_Ask
-- [ ] │   ├── 130_Com_Reply
+- [x] │   ├── 100_Commands
+- [x] │   ├── 110_Com_Announce
+- [x] │   ├── 120_Com_Ask
+- [x] │   ├── 130_Com_Reply
 - [ ] │   ├── 140_Com_Status
 - [ ] │   ├── 150_Reporting
 - [ ] │   ├── 220_Support
 - [ ] │   ├── 230_GenericRadioMessages
-- [ ] │   ├── DirectionCompass1
+- [x] │   ├── DirectionCompass1
 - [ ] │   ├── DirectionCompass2
-- [ ] │   ├── DirectionRelative1
+- [x] │   ├── DirectionRelative1
 - [x] │   ├── DirectionRelative2
-- [ ] │   ├── DirectionRelative3
+- [x] │   ├── DirectionRelative3
 - [ ] │   └── DistanceAbsolute1
 - [ ] ├── NormalContact
 - [ ] │   └── 010_Vehicles
 - [ ] ├── NormalEngage
-- [ ] │   ├── 010_Vehicles
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
+- [x] │   ├── 010_Vehicles
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
 - [x] │   ├── 035_NumbersGrid
-- [ ] │   ├── DirectionCompass1
-- [ ] │   ├── DirectionRelative1
+- [x] │   ├── DirectionCompass1
+- [x] │   ├── DirectionRelative1
 - [x] │   ├── DirectionRelative2
-- [ ] │   ├── DirectionRelative3
+- [x] │   ├── DirectionRelative3
 - [ ] │   └── DistanceAbsolute1
 - [ ] ├── NormalTarget
 - [ ] │   ├── 010_Vehicles
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
 - [x] │   ├── 035_NumbersGrid
-- [ ] │   ├── DirectionCompass1
-- [ ] │   ├── DirectionRelative1
+- [x] │   ├── DirectionCompass1
+- [x] │   ├── DirectionRelative1
 - [x] │   ├── DirectionRelative2
-- [ ] │   ├── DirectionRelative3
+- [x] │   ├── DirectionRelative3
 - [ ] │   └── DistanceAbsolute1
-- [ ] ├── NormalWatch
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
-- [ ] │   └── DirectionCompass1
+- [x] ├── NormalWatch
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
+- [x] │   └── DirectionCompass1
 - [ ] ├── Stealth
-- [ ] │   ├── 010_Vehicles
-- [ ] │   ├── 015_Targeting
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
+- [x] │   ├── 010_Vehicles
+- [x] │   ├── 015_Targeting
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
 - [x] │   ├── 035_NumbersGrid
 - [ ] │   ├── 040_MoveDistanceAbsolute1
 - [ ] │   ├── 070_MoveDirectionRelative1
 - [x] │   ├── 080_MoveAlphabet
-- [ ] │   ├── 090_MoveLocations
-- [ ] │   ├── 100_Commands
-- [ ] │   ├── 110_Com_Announce
-- [ ] │   ├── 120_Com_Ask
-- [ ] │   ├── 130_Com_Reply
+- [x] │   ├── 100_Commands
+- [x] │   ├── 110_Com_Announce
+- [x] │   ├── 120_Com_Ask
+- [x] │   ├── 130_Com_Reply
 - [ ] │   ├── 140_Com_Status
 - [ ] │   ├── 150_Reporting
 - [ ] │   ├── 200_CombatShouts
 - [ ] │   ├── 220_Support
-- [ ] │   ├── DirectionCompass1
+- [x] │   ├── DirectionCompass1
 - [ ] │   ├── DirectionCompass2
-- [ ] │   ├── DirectionRelative1
+- [x] │   ├── DirectionRelative1
 - [x] │   ├── DirectionRelative2
-- [ ] │   ├── DirectionRelative3
+- [x] │   ├── DirectionRelative3
 - [ ] │   └── DistanceAbsolute1
 - [ ] ├── StealthEngage
-- [ ] │   ├── 010_Vehicles
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
+- [x] │   ├── 010_Vehicles
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
 - [x] │   ├── 035_NumbersGrid
-- [ ] │   ├── DirectionCompass1
-- [ ] │   ├── DirectionRelative1
+- [x] │   ├── DirectionCompass1
+- [x] │   ├── DirectionRelative1
 - [x] │   ├── DirectionRelative2
-- [ ] │   ├── DirectionRelative3
+- [x] │   ├── DirectionRelative3
 - [ ] │   └── DistanceAbsolute1
-- [ ] ├── StealthWatch
-- [ ] │   ├── 025_Numbers
-- [ ] │   ├── 030_Teams
-- [ ] │   └── DirectionCompass1
+- [x] ├── StealthWatch
+- [x] │   ├── 025_Numbers
+- [x] │   ├── 030_Teams
+- [x] │   └── DirectionCompass1
 
 # Excluded destination folders
 
@@ -149,6 +146,7 @@ No origin file available in FDF
 - │   ├── 020_Names
 - ├── Normal
 - │   ├── 020_Names
+- │   ├── 090_MoveLocations
 - ├── NormalEngage
 - │   ├── 020_Names
 - ├── NormalTarget
@@ -157,6 +155,7 @@ No origin file available in FDF
 - │   ├── 020_Names
 - ├── Stealth
 - │   ├── 020_Names
+- │   ├── 090_MoveLocations
 - ├── StealthEngage
 - │   ├── 020_Names
 - ├── StealthWatch
