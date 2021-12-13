@@ -7,6 +7,8 @@ Heavily in progress, probably will make a release when it's doing everything it'
 
 `python3 converta2toa3.py --input <directory> --output <directory>`
 
+...or configure the folders in runall.py and run it
+
 # TODO
 
 - [x] Use args for input and output instead of hardcoding them
@@ -16,9 +18,13 @@ Heavily in progress, probably will make a release when it's doing everything it'
 - [x] Convert the files using the script
 - [ ] Collect a list of the sound-files that need to be manually touched up (partially done)
 - [ ] Check for compatibility for linux and windows
-- [ ] Write instructions
+- [ ] Write instructions for script usage
 - [ ] Touch up sound files
+- [ ] Write config.cpp
+- [ ] Automate file additions (config.cpp, %PREFIX%, BIS_AddonInfo.hpp, etc.)
 - [ ] Package as pbo
+- [ ] Some sound files are not working in arsenal (BUG)
+- [ ] Contact-directories should only say the "targetname", no need to concatenate "contact + targetname" (IMPROVEMENT)
 
 # Destination folder conversion progress
 
