@@ -694,86 +694,86 @@ TEAM_030_Teams = {
 }
 
 VEHICLES_010_Vehicles = {
-"010_Vehicles/veh_air_gunship_p":"gunships",
-"010_Vehicles/veh_air_gunship_s":"gunship",
-"010_Vehicles/veh_air_p":"aircrafts",
-"010_Vehicles/veh_air_parachute_p":"parachutes",
-"010_Vehicles/veh_air_parachute_s":"parachute",
-"010_Vehicles/veh_air_s":"aircraft",
-"010_Vehicles/veh_air_uav_p":"UAVs",
-"010_Vehicles/veh_air_uav_s":"UAV",
-"010_Vehicles/veh_air_plane_s":"aircraft",
-"010_Vehicles/veh_air_plane_p":"aircrafts",
-"010_Vehicles/veh_helicopter_p":"helicopters",
-"010_Vehicles/veh_helicopter_s":"helicopter",
-"010_Vehicles/veh_infantry_AA_p":"launcherSoldiers",
-"010_Vehicles/veh_infantry_AA_s":"launcherSoldier",
-"010_Vehicles/veh_infantry_AT_p":"launcherSoldiers",
-"010_Vehicles/veh_infantry_AT_s":"launcherSoldier",
-"010_Vehicles/veh_infantry_civilian_p":"men",
-"010_Vehicles/veh_infantry_civilian_s":"man",
-"010_Vehicles/veh_infantry_diver_p":"SpecialForce",
-"010_Vehicles/veh_infantry_diver_s":"SpecialForce",
-"010_Vehicles/veh_infantry_MG_p":"Mgunners",
-"010_Vehicles/veh_infantry_MG_s":"MGunner",
-"010_Vehicles/veh_infantry_SF_p":"SpecialForces",
-"010_Vehicles/veh_infantry_SF_s":"SpecialForce",
-"010_Vehicles/veh_infantry_Sniper_p":"Snipers",
-"010_Vehicles/veh_infantry_Sniper_s":"Sniper",
-"010_Vehicles/veh_infantry_medic_p":"Medics",
-"010_Vehicles/veh_infantry_medic_s":"Medic",
-"010_Vehicles/veh_infantry_officer_p":"officers",
-"010_Vehicles/veh_infantry_officer_s":"officer",
-"010_Vehicles/veh_infantry_p_1":"soldiers",
-"010_Vehicles/veh_infantry_p_2":"soldiers",
-"010_Vehicles/veh_infantry_p_3":"soldiers",
-"010_Vehicles/veh_infantry_pilot_p":"pilots",
-"010_Vehicles/veh_infantry_pilot_s":"pilot",
-"010_Vehicles/veh_infantry_s_1":"soldier",
-"010_Vehicles/veh_infantry_s_2":"soldier",
-"010_Vehicles/veh_infantry_s_3":"soldier",
-"010_Vehicles/veh_ship_attackBoat_p":"boats",
-"010_Vehicles/veh_ship_attackBoat_s":"boat",
-"010_Vehicles/veh_ship_boat_p":"boats",
-"010_Vehicles/veh_ship_boat_s":"boat",
-"010_Vehicles/veh_ship_p":"ships",
-"010_Vehicles/veh_ship_s":"ship",
-"010_Vehicles/veh_ship_submarine_p":"ship",
-"010_Vehicles/veh_ship_submarine_s":"ship",
-"010_Vehicles/veh_static_AA_p":"staticAALaunchers",
-"010_Vehicles/veh_static_AA_p":"staticATLaunchers",
-"010_Vehicles/veh_static_AA_s":"staticAALauncher",
-"010_Vehicles/veh_static_AA_s":"staticATLauncher",
-"010_Vehicles/veh_static_cannon_p":"staticCannons",
-"010_Vehicles/veh_static_cannon_s":"staticCannon",
-"010_Vehicles/veh_static_GL_p":"staticgrenadelaunchers",
-"010_Vehicles/veh_static_GL_s":"staticgrenadelauncher",
-"010_Vehicles/veh_Static_MG_p":"StaticMGWeapons",
-"010_Vehicles/veh_Static_MG_s":"StaticMGWeapon",
-"010_Vehicles/veh_Static_mortar_p":"StaticMortars",
-"010_Vehicles/veh_Static_mortar_s":"StaticMortar",
-"010_Vehicles/veh_static_p":"staticLaunchers",
-"010_Vehicles/veh_static_s":"staticLaunchers",
-"010_Vehicles/veh_unknown_p":"vehicles",
-"010_Vehicles/veh_unknown_s":"vehicle",
-"010_Vehicles/veh_vehicle_APC_p":"APCs",
-"010_Vehicles/veh_vehicle_APC_s":"APC",
-"010_Vehicles/veh_vehicle_armor_p":"vehicles",#touchup raskaita+ajoneuvoja
-"010_Vehicles/veh_vehicle_armor_s":"vehicle",#touchup raskas+ajoneuvo
-"010_Vehicles/veh_vehicle_armedcar_p":"technicals",
-"010_Vehicles/veh_vehicle_armedcar_s":"technical",
-"010_Vehicles/veh_vehicle_car_p":"cars",
-"010_Vehicles/veh_vehicle_car_s":"car",
-"010_Vehicles/veh_vehicle_mrap_p":"technicals",#touchup raskaita+ajoneuvoja
-"010_Vehicles/veh_vehicle_mrap_s":"technical",#touchup raskas+ajoneuvo
-"010_Vehicles/veh_vehicle_p":"vehicles",
-"010_Vehicles/veh_vehicle_s":"vehicle",
-"010_Vehicles/veh_vehicle_tank_p":"tanks",
-"010_Vehicles/veh_vehicle_tank_s":"tank",
-"010_Vehicles/veh_vehicle_truck_p":"trucks",
-"010_Vehicles/veh_vehicle_truck_s":"truck",
-"010_Vehicles/veh_vehicle_ugv_p":"vehicles",#touchup ???
-"010_Vehicles/veh_vehicle_ugv_s":"vehicle",#touchup ??? not a vehicle 
+"010_Vehicles/veh_air_gunship_p":"vehicles/gunships",
+"010_Vehicles/veh_air_gunship_s":"vehicles/gunship",
+"010_Vehicles/veh_air_p":"vehicles/aircrafts",
+"010_Vehicles/veh_air_parachute_p":"vehicles/parachutes",
+"010_Vehicles/veh_air_parachute_s":"vehicles/parachute",
+"010_Vehicles/veh_air_s":"vehicles/aircraft",
+"010_Vehicles/veh_air_uav_p":"vehicles/UAVs",
+"010_Vehicles/veh_air_uav_s":"vehicles/UAV",
+"010_Vehicles/veh_air_plane_s":"vehicles/aircraft",
+"010_Vehicles/veh_air_plane_p":"vehicles/aircrafts",
+"010_Vehicles/veh_helicopter_p":"vehicles/helicopters",
+"010_Vehicles/veh_helicopter_s":"vehicles/helicopter",
+"010_Vehicles/veh_infantry_AA_p":"vehicles/launcherSoldiers",
+"010_Vehicles/veh_infantry_AA_s":"vehicles/launcherSoldier",
+"010_Vehicles/veh_infantry_AT_p":"vehicles/launcherSoldiers",
+"010_Vehicles/veh_infantry_AT_s":"vehicles/launcherSoldier",
+"010_Vehicles/veh_infantry_civilian_p":"vehicles/men",
+"010_Vehicles/veh_infantry_civilian_s":"vehicles/man",
+"010_Vehicles/veh_infantry_diver_p":"vehicles/SpecialForce",
+"010_Vehicles/veh_infantry_diver_s":"vehicles/SpecialForce",
+"010_Vehicles/veh_infantry_MG_p":"vehicles/Mgunners",
+"010_Vehicles/veh_infantry_MG_s":"vehicles/MGunner",
+"010_Vehicles/veh_infantry_SF_p":"vehicles/SpecialForces",
+"010_Vehicles/veh_infantry_SF_s":"vehicles/SpecialForce",
+"010_Vehicles/veh_infantry_Sniper_p":"vehicles/Snipers",
+"010_Vehicles/veh_infantry_Sniper_s":"vehicles/Sniper",
+"010_Vehicles/veh_infantry_medic_p":"vehicles/Medics",
+"010_Vehicles/veh_infantry_medic_s":"vehicles/Medic",
+"010_Vehicles/veh_infantry_officer_p":"vehicles/officers",
+"010_Vehicles/veh_infantry_officer_s":"vehicles/officer",
+"010_Vehicles/veh_infantry_p_1":"vehicles/soldiers",
+"010_Vehicles/veh_infantry_p_2":"vehicles/soldiers",
+"010_Vehicles/veh_infantry_p_3":"vehicles/soldiers",
+"010_Vehicles/veh_infantry_pilot_p":"vehicles/pilots",
+"010_Vehicles/veh_infantry_pilot_s":"vehicles/pilot",
+"010_Vehicles/veh_infantry_s_1":"vehicles/soldier",
+"010_Vehicles/veh_infantry_s_2":"vehicles/soldier",
+"010_Vehicles/veh_infantry_s_3":"vehicles/soldier",
+"010_Vehicles/veh_ship_attackBoat_p":"vehicles/boats",
+"010_Vehicles/veh_ship_attackBoat_s":"vehicles/boat",
+"010_Vehicles/veh_ship_boat_p":"vehicles/boats",
+"010_Vehicles/veh_ship_boat_s":"vehicles/boat",
+"010_Vehicles/veh_ship_p":"vehicles/ships",
+"010_Vehicles/veh_ship_s":"vehicles/ship",
+"010_Vehicles/veh_ship_submarine_p":"vehicles/ship",
+"010_Vehicles/veh_ship_submarine_s":"vehicles/ship",
+"010_Vehicles/veh_static_AA_p":"vehicles/staticAALaunchers",
+"010_Vehicles/veh_static_AA_p":"vehicles/staticATLaunchers",
+"010_Vehicles/veh_static_AA_s":"vehicles/staticAALauncher",
+"010_Vehicles/veh_static_AA_s":"vehicles/staticATLauncher",
+"010_Vehicles/veh_static_cannon_p":"vehicles/staticCannons",
+"010_Vehicles/veh_static_cannon_s":"vehicles/staticCannon",
+"010_Vehicles/veh_static_GL_p":"vehicles/staticgrenadelaunchers",
+"010_Vehicles/veh_static_GL_s":"vehicles/staticgrenadelauncher",
+"010_Vehicles/veh_Static_MG_p":"vehicles/StaticMGWeapons",
+"010_Vehicles/veh_Static_MG_s":"vehicles/StaticMGWeapon",
+"010_Vehicles/veh_Static_mortar_p":"vehicles/StaticMortars",
+"010_Vehicles/veh_Static_mortar_s":"vehicles/StaticMortar",
+"010_Vehicles/veh_static_p":"vehicles/staticLaunchers",
+"010_Vehicles/veh_static_s":"vehicles/staticLaunchers",
+"010_Vehicles/veh_unknown_p":"vehicles/vehicles",
+"010_Vehicles/veh_unknown_s":"vehicles/vehicle",
+"010_Vehicles/veh_vehicle_APC_p":"vehicles/APCs",
+"010_Vehicles/veh_vehicle_APC_s":"vehicles/APC",
+"010_Vehicles/veh_vehicle_armor_p":"custom/veh_vehicle_armor_p",#touchup
+"010_Vehicles/veh_vehicle_armor_s":"custom/veh_vehicle_armor_s",#touchup
+"010_Vehicles/veh_vehicle_armedcar_p":"vehicles/technicals",
+"010_Vehicles/veh_vehicle_armedcar_s":"vehicles/technical",
+"010_Vehicles/veh_vehicle_car_p":"vehicles/cars",
+"010_Vehicles/veh_vehicle_car_s":"vehicles/car",
+"010_Vehicles/veh_vehicle_mrap_p":"custom/veh_vehicle_armor_p",#touchup
+"010_Vehicles/veh_vehicle_mrap_s":"custom/veh_vehicle_armor_s",#touchup
+"010_Vehicles/veh_vehicle_p":"vehicles/vehicles",
+"010_Vehicles/veh_vehicle_s":"vehicles/vehicle",
+"010_Vehicles/veh_vehicle_tank_p":"vehicles/tanks",
+"010_Vehicles/veh_vehicle_tank_s":"vehicles/tank",
+"010_Vehicles/veh_vehicle_truck_p":"vehicles/trucks",
+"010_Vehicles/veh_vehicle_truck_s":"vehicles/truck",
+"010_Vehicles/veh_vehicle_ugv_p":"vehicles/vehicles",# doesn't really match
+"010_Vehicles/veh_vehicle_ugv_s":"vehicles/vehicle",# doesn't really match
 }
 
 VEHICLES_ENGAGE = {
@@ -919,13 +919,16 @@ DISTANCE_DistanceAbsolute1 = {
 "DistanceAbsolute1/dist2500_1":"distance/distFar", #touchup, does not match
 "DistanceAbsolute1/dist2500_2":"distance/distFar", #touchup, does not match
 "DistanceAbsolute1/dist2500_3":"distance/distFar", #touchup, does not match
-"DistanceAbsolute1/dist800_1":"distance/dist1000", #touchup, does not match
-"DistanceAbsolute1/dist800_2":"distance/dist1000", #touchup, does not match
-"DistanceAbsolute1/dist800_3":"distance/dist1000", #touchup, does not match
-"DistanceAbsolute1/dist1500_1":"distance/dist2000", #touchup, does not match
-"DistanceAbsolute1/dist1500_2":"distance/dist2000", #touchup, does not match
-"DistanceAbsolute1/dist1500_3":"distance/dist2000", #touchup, does not match
+"DistanceAbsolute1/dist800_1":"distance/dist1000", #touchup, does not matchok
+"DistanceAbsolute1/dist800_2":"distance/dist1000", #touchup, does not matchok
+"DistanceAbsolute1/dist800_3":"distance/dist1000", #touchup, does not matchok
 }
+DISTANCE_DistanceAbsolute1_1500_CONCAT = {
+"DistanceAbsolute1/dist1500_1":"distance/dist1000", #touchup, does not match
+"DistanceAbsolute1/dist1500_2":"distance/dist1000", #touchup, does not match
+"DistanceAbsolute1/dist1500_3":"distance/dist1000", #touchup, does not match
+}
+
 DISTANCE_DistanceAbsolute1_CONCAT = {
 "DistanceAbsolute1/dist100_1":"distance/dist100",
 "DistanceAbsolute1/dist100_2":"distance/dist100",
@@ -933,34 +936,41 @@ DISTANCE_DistanceAbsolute1_CONCAT = {
 "DistanceAbsolute1/dist200_1":"distance/dist200",
 "DistanceAbsolute1/dist200_2":"distance/dist200",
 "DistanceAbsolute1/dist200_3":"distance/dist200",
-"DistanceAbsolute1/dist300_1":"distance/dist200", #touchup, does not match
-"DistanceAbsolute1/dist300_2":"distance/dist200", #touchup, does not match
-"DistanceAbsolute1/dist300_3":"distance/dist200", #touchup, does not match
-"DistanceAbsolute1/dist400_1":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist400_2":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist400_3":"distance/dist500", #touchup, does not match
 "DistanceAbsolute1/dist500_1":"distance/dist500",
 "DistanceAbsolute1/dist500_2":"distance/dist500",
-"DistanceAbsolute1/dist600_1":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist600_2":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist600_3":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist700_1":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist700_2":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist700_3":"distance/dist500", #touchup, does not match
-"DistanceAbsolute1/dist75_1":"distance/dist50", #touchup, does not match
-"DistanceAbsolute1/dist75_2":"distance/dist50", #touchup, does not match
-"DistanceAbsolute1/dist75_3":"distance/dist50", #touchup, does not match
+}
+
+DISTANCE_DistanceAbsolute1_CUSTOM = {
+"DistanceAbsolute1/dist300_1":"custom/dist300", #touchup, does not match, done
+"DistanceAbsolute1/dist300_2":"custom/dist300", #touchup, does not match, done
+"DistanceAbsolute1/dist300_3":"custom/dist300", #touchup, does not match, done
+"DistanceAbsolute1/dist400_1":"custom/dist400", #touchup, does not match, done
+"DistanceAbsolute1/dist400_2":"custom/dist400", #touchup, does not match, done
+"DistanceAbsolute1/dist400_3":"custom/dist400", #touchup, does not match, done
+"DistanceAbsolute1/dist600_1":"custom/dist600", #touchup, does not match, done
+"DistanceAbsolute1/dist600_2":"custom/dist600", #touchup, does not match, done
+"DistanceAbsolute1/dist600_3":"custom/dist600", #touchup, does not match, done
+"DistanceAbsolute1/dist700_1":"custom/dist700", #touchup, does not match, done
+"DistanceAbsolute1/dist700_2":"custom/dist700", #touchup, does not match, done
+"DistanceAbsolute1/dist700_3":"custom/dist700", #touchup, does not match, done
+"DistanceAbsolute1/dist75_1":"custom/dist75", #touchup, does not match, done
+"DistanceAbsolute1/dist75_2":"custom/dist75", #touchup, does not match, done
+"DistanceAbsolute1/dist75_3":"custom/dist75", #touchup, does not match, done
 }
 DISTANCE_040_MoveDistanceAbsolute1_CONCAT = {#todo move one kilometer etc
 "040_MoveDistanceAbsolute1/move_dist100":"distance/dist100",
 "040_MoveDistanceAbsolute1/move_dist200":"distance/dist200",
 "040_MoveDistanceAbsolute1/move_dist500":"distance/dist500",
-"040_MoveDistanceAbsolute1/move_dist75":"distance/dist50", #touchup, does not match
-"040_MoveDistanceAbsolute1/move_dist300":"distance/dist200", #touchup, does not match
-"040_MoveDistanceAbsolute1/move_dist400":"distance/dist500", #touchup, does not match
-"040_MoveDistanceAbsolute1/move_dist600":"distance/dist500", #touchup, does not match
-"040_MoveDistanceAbsolute1/move_dist700":"distance/dist500", #touchup, does not match
+
 }
+DISTANCE_040_MoveDistanceAbsolute1_CUSTOM = {
+"040_MoveDistanceAbsolute1/move_dist75":"custom/dist75",
+"040_MoveDistanceAbsolute1/move_dist300":"custom/dist300",
+"040_MoveDistanceAbsolute1/move_dist400":"custom/dist400",
+"040_MoveDistanceAbsolute1/move_dist600":"custom/dist600",
+"040_MoveDistanceAbsolute1/move_dist700":"custom/dist700",
+}
+
 DEFAULT_070_MoveDirectionRelative1 = {
 "070_MoveDirectionRelative1/moveBack_1":"Reverse",
 "070_MoveDirectionRelative1/moveBack_2":"Reverse",
@@ -1050,6 +1060,14 @@ def concat_DistanceAbsolute1():
 			output = A3_DIR + state + "/" + n + ".ogg"
 			concatenate_audio_moviepy(start, end, output)
 
+def concat_DistanceAbsolute1_1500():
+	for state in STATES_DistanceAbsolute1:
+		for n, m in DISTANCE_DistanceAbsolute1_1500_CONCAT.items():
+			start = A2_DIR + "default/"+ m + ".ogg"
+			end = A2_DIR + "default/distance/dist500.ogg"
+			output = A3_DIR + state + "/" + n + ".ogg"
+			concatenate_audio_moviepy(start, end, output)
+
 def concat_040_MoveDistanceAbsolute1():
 	for state in STATES_040_MoveDistanceAbsolute1:
 		for n, m in DISTANCE_040_MoveDistanceAbsolute1_CONCAT.items():
@@ -1059,6 +1077,14 @@ def concat_040_MoveDistanceAbsolute1():
 			output = A3_DIR + state + "/" + n + ".ogg"
 			concatenate_audio_moviepy_three(advance, number, meters, output)
 			
+def concat_040_MoveDistanceAbsolute1_CUSTOM():
+	for state in STATES_040_MoveDistanceAbsolute1:
+		for n, m in DISTANCE_040_MoveDistanceAbsolute1_CUSTOM.items():
+			advance = A2_DIR + "default/Advance.ogg"
+			number = A2_DIR + "default/"+ m + ".ogg"
+			output = A3_DIR + state + "/" + n + ".ogg"
+			concatenate_audio_moviepy(advance, number, output)
+	
 def concat_035_NumbersGrid():
 	for state in STATES_NUMBERSGRID:
 		#todo make the concats run only once and copy files to all the destionations
@@ -1158,7 +1184,7 @@ STATES_130_Com_Reply = {"Combat","Normal","Stealth"}
 convert(DEFAULT_130_Com_Reply, STATES_130_Com_Reply, srcfolders[0])
 #-----
 STATES_010_Vehicles = {"Combat","Normal","Stealth"}
-convert_nolip(VEHICLES_010_Vehicles, STATES_010_Vehicles, srcfolders[13])
+convert_nolip(VEHICLES_010_Vehicles, STATES_010_Vehicles, srcfolders[0])
 #-----
 STATES_DirectionCompass1 = {"Combat","CombatEngage","Normal","NormalEngage","NormalTarget","NormalWatch","Stealth","StealthEngage","StealthWatch"}
 convert(DIRECTION_DirectionCompass1, STATES_DirectionCompass1, srcfolders[4])
@@ -1189,6 +1215,8 @@ convert(WEAPONS_005_Weapons, STATES_005_Weapons, srcfolders[0])
 #-----
 STATES_DistanceAbsolute1 = {"Combat","CombatEngage","Normal","NormalEngage","NormalTarget","Stealth","StealthEngage"}
 convert(DISTANCE_DistanceAbsolute1,STATES_DistanceAbsolute1, srcfolders[0])
+convert_nolip(DISTANCE_DistanceAbsolute1_CUSTOM,STATES_DistanceAbsolute1, srcfolders[0])
+
 #-----
 STATES_070_MoveDirectionRelative1 = {"Combat","Normal","Stealth"}
 convert(DEFAULT_070_MoveDirectionRelative1,STATES_070_MoveDirectionRelative1, srcfolders[0])
@@ -1202,8 +1230,10 @@ convert_clockfacing()
 convert_030_Teams()
 print("Concatenating files... 1/6")
 concat_040_MoveDistanceAbsolute1()
+concat_040_MoveDistanceAbsolute1_CUSTOM()
 print("Concatenating files... 2/6")
 concat_DistanceAbsolute1()
+concat_DistanceAbsolute1_1500()
 print("Concatenating files... 3/6")
 concat_Engage_010_Vehicles()
 print("Concatenating files... 4/6")

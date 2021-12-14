@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import os
 
+#Extract the @FDF_dubbingradio, configure your own input and output folders and run the script!
+
 os.system('python3 converta2toa3.py --input /mnt/g/arma3projects/a2toa3/src/Male01FI/ --output /mnt/g/arma3projects/a2toa3/fdfvoicesoutput/Male01FIN/')
 os.system('python3 converta2toa3.py --input /mnt/g/arma3projects/a2toa3/src/Male02FI/ --output /mnt/g/arma3projects/a2toa3/fdfvoicesoutput/Male02FIN/')
 os.system('python3 converta2toa3.py --input /mnt/g/arma3projects/a2toa3/src/Male03FI/ --output /mnt/g/arma3projects/a2toa3/fdfvoicesoutput/Male03FIN/')
