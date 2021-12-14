@@ -18,13 +18,51 @@ Heavily in progress, probably will make a release when it's doing everything it'
 - [x] Convert the files using the script
 - [ ] Collect a list of the sound-files that need to be manually touched up (partially done)
 - [ ] Check for compatibility for linux and windows
-- [ ] Write instructions for script usage
-- [ ] Touch up sound files
 - [ ] Write config.cpp
 - [ ] Automate file additions (config.cpp, %PREFIX%, BIS_AddonInfo.hpp, etc.)
-- [ ] Package as pbo
-- [ ] Some sound files are not working in arsenal (BUG)
-- [ ] Contact-directories should only say the "targetname", no need to concatenate "contact + targetname" (IMPROVEMENT)
+- [ ] Catalogue missing files from the source folders and figure out how to address them
+- [ ] Touch up sound files
+
+# Sound file anomalities 
+Need fixing in the source directory
+
+## female01 
+- CopyMyStance missing, replace with empty
+- WoundedE.ogg/lip -> Injured.ogg/lip
+## male01
+- none
+## male02
+- none
+## male03 
+- alphabet/foxtrot.ogg -> fotxtrot.ogg
+## male04
+- none
+## male05 
+- formation/FormEcholonLeft.lip -> use random .lip
+- formation/FormEcholonRight.lip -> use random .lip and rename to ec
+- CopyMyStance missing
+- Injured missing
+## male 06
+- ManualFire missing, replace with empty
+- alphabet/foxtrot.ogg -> fotxtrot.ogg
+## male 07
+- none 
+## male 08
+- none
+## male 09
+- none
+
+# Soundfiles touchup needed
+
+
+- DistanceAbsolute1/dist75_1,
+- DistanceAbsolute1/dist300_1
+- DistanceAbsolute1/dist400_1
+- DistanceAbsolute1/dist600_1
+- DistanceAbsolute1/dist700_1
+- DistanceAbsolute1/dist800_1
+- DistanceAbsolute1/dist1500_1
+- DistanceAbsolute1/dist2500_1
 
 # Destination folder conversion progress
 

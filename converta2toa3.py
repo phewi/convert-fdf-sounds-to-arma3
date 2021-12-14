@@ -23,17 +23,17 @@ else:
 'DEFAULT_'				sound files with source in the default folder of input or it's subfolder
 '''
 # DIRS_
-DIRS_Combat = {"010_Vehicles","015_Targeting","020_Names","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","100_Commands","110_Com_Announce","130_Com_Reply","200_CombatShouts","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1",}
+DIRS_Combat = {"010_Vehicles","015_Targeting","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","100_Commands","110_Com_Announce","130_Com_Reply","200_CombatShouts","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1",}
 DIRS_CombatContact = {"010_Vehicles"}
-DIRS_CombatEngage = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1",}
-DIRS_Normal = {"005_Weapons","010_Vehicles","015_Targeting","020_Names","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","080_MoveAlphabet","090_MoveLocations","100_Commands","110_Com_Announce","120_Com_Ask","130_Com_Reply","140_Com_Status","150_Reporting","220_Support","230_GenericRadioMessages","DirectionCompass1","DirectionCompass2","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_CombatEngage = {"010_Vehicles","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1",}
+DIRS_Normal = {"005_Weapons","010_Vehicles","015_Targeting","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","080_MoveAlphabet","100_Commands","110_Com_Announce","120_Com_Ask","130_Com_Reply","140_Com_Status","150_Reporting","220_Support","DirectionCompass1","DirectionCompass2","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
 DIRS_NormalContact = {"010_Vehicles"}
-DIRS_NormalEngage = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
-DIRS_NormalTarget = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
-DIRS_NormalWatch = {"020_Names","025_Numbers","030_Teams","DirectionCompass1"}
-DIRS_Stealth = {"010_Vehicles","015_Targeting","020_Names","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","080_MoveAlphabet","090_MoveLocations","100_Commands","110_Com_Announce","120_Com_Ask","130_Com_Reply","140_Com_Status","150_Reporting","200_CombatShouts","220_Support","DirectionCompass1","DirectionCompass2","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
-DIRS_StealthEngage = {"010_Vehicles","020_Names","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
-DIRS_StealthWatch = {"020_Names","025_Numbers","030_Teams","DirectionCompass1"}
+DIRS_NormalEngage = {"010_Vehicles","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_NormalTarget = {"010_Vehicles","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_NormalWatch = {"025_Numbers","030_Teams","DirectionCompass1"}
+DIRS_Stealth = {"010_Vehicles","015_Targeting","025_Numbers","030_Teams","035_NumbersGrid","040_MoveDistanceAbsolute1","070_MoveDirectionRelative1","080_MoveAlphabet","100_Commands","110_Com_Announce","120_Com_Ask","130_Com_Reply","140_Com_Status","150_Reporting","200_CombatShouts","220_Support","DirectionCompass1","DirectionCompass2","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_StealthEngage = {"010_Vehicles","025_Numbers","030_Teams","035_NumbersGrid","DirectionCompass1","DirectionRelative1","DirectionRelative2","DirectionRelative3","DistanceAbsolute1"}
+DIRS_StealthWatch = {"025_Numbers","030_Teams","DirectionCompass1"}
 
 #Files without destination are commented out
 DEFAULT_000_Unused = {
@@ -189,174 +189,252 @@ NUMBERS_LIST_035_NumbersGrid = {
 DEFAULT_100_Commands = {
 "100_Commands/Advance":"Advance",
 "100_Commands/AssembleThatWeapon":"AssembleThat",
+"100_Commands/BoardThatVehicle":"BoardThat",
 "100_Commands/CancelManualFire_1":"CancelManualFire",
 "100_Commands/CancelManualFire_2":"CancelManualFire",
 "100_Commands/CancelManualFire_3":"CancelManualFire",
+"100_Commands/CannotExecuteAdjustCoordinates":"Negative",
+"100_Commands/CannotExecuteOutsideEnvelope":"Negative",
+#"100_Commands/CarryThatSoldier":"",
+#"100_Commands/CarryThatSoldier":"",
 "100_Commands/CeaseFire_1":"CeaseFireE",
 "100_Commands/CeaseFire_2":"CeaseFireE",
 "100_Commands/CheckYourFire":"CheckYourFireE",
+#"100_Commands/CloseThatDoor":"",
+"100_Commands/CombatOpenFire_1":"Fire",
+"100_Commands/CombatOpenFire_2":"EngageE",
+"100_Commands/CombatOpenFire_3":"FireE",
+"100_Commands/CombatOpenFire_4":"Fire",
+"100_Commands/CombatOpenFire_5":"EngageE",
+"100_Commands/CommStealth":"Stealth",
+"100_Commands/CopyMyStance":"CopyMyStance",
 "100_Commands/Danger":"DangerE",
 "100_Commands/DeactivateCharge":"DeactivateCharge",
 "100_Commands/DetonateCharge":"DetonateCharge",
 "100_Commands/DisarmThatMine":"DisarmThatMine",
 "100_Commands/DisassembleThatWeapon":"DisassembleThat",
-"100_Commands/Dismount_2":"Disembark",
 "100_Commands/Disengage":"Disengage",
 "100_Commands/Dismount_1":"Dismount",
-"100_Commands/GetInThatVehicleDriver":"Driver",
+"100_Commands/Dismount_2":"Disembark",
+"100_Commands/DoNotFire":"HoldFire",
+#"100_Commands/DownAndQuiet":"",
+#"100_Commands/DropThatMagazine":"",
+#"100_Commands/DropTheWeapon":"",
+#"100_Commands/DropYourPack":"",
 "100_Commands/Eject_1":"EjectE",
 "100_Commands/Eject_2":"EjectE",
 "100_Commands/EngageAtWill":"EngageAtWill",
-"100_Commands/GetInThatVehicleCommander":"Commander",
-"100_Commands/CopyMyStance":"CopyMyStance",
 "100_Commands/FallBack":"FallBackE",
-"100_Commands/VehFast_1":"Fast",
-"100_Commands/VehFast_2":"Fast",
-"100_Commands/VehFast_3":"Fast",
 "100_Commands/FireAtWill":"FireAtWill",
 "100_Commands/FlankLeft":"FlankLeft",
 "100_Commands/FlankRight":"FlankRight",
 "100_Commands/FlashlightsOff":"FlashlightsOff",
 "100_Commands/FlashlightsOn":"FlashlightsOn",
 "100_Commands/FormOnMe":"FormOnMeE",
-"100_Commands/VehForward_1":"Forward",
-"100_Commands/VehForward_2":"Forward",
 "100_Commands/FreeToEngage":"FreeToEngage",
-"100_Commands/GoProne_1":"GetDownE",
 "100_Commands/GetInThatVehicle":"GetInThat",
-"100_Commands/GetSupport":"GetSupportAt",
-"100_Commands/GoProne":"GoProne",
+"100_Commands/GetInThatVehicleCommander":"Commander",
+"100_Commands/GetInThatVehicleDriver":"Driver",
 "100_Commands/GetInThatVehicleGunner":"Gunner",
+"100_Commands/GetInThatVehiclePilot":"Pilot",
+"100_Commands/GetReadyToFight":"BeAdvised",
+"100_Commands/GetSupport":"GetSupportAt",
+"100_Commands/GoProne_1":"GoProne",
+"100_Commands/GoProne_2":"GetDownE",
+"100_Commands/GoProne_3":"HitTheDirt",
 "100_Commands/Halt":"Halt",
 "100_Commands/HealThatSoldier":"HealThat",
-"100_Commands/GoProne_2":"HitTheDirt",
+#"100_Commands/HelpThatSoldier":"",
 "100_Commands/HoldFire":"HoldFire",
-"100_Commands/PointersOff.ogg":"LasersOff",
-"100_Commands/PointersOn.ogg":"LasersOn",
-"100_Commands/VehLeft_1":"Left",
-"100_Commands/VehLeft_2":"Left",
-"100_Commands/VehLeft_3":"Left",
+#"100_Commands/JoinThatGroup":"",
+#"100_Commands/KeepFocused":"",#todo ei löydy vastiketta
+#"100_Commands/KeepFormation":"",
 "100_Commands/LightThatFire":"LightThatFire",
+#"100_Commands/LockAndLoad":"",
 "100_Commands/ManualFire_1":"ManualFire",
 "100_Commands/ManualFire_2":"ManualFire",
 "100_Commands/ManualFire_3":"ManualFire",
 "100_Commands/ObserveThatPosition":"ObserveThatPosition",
-"100_Commands/SuppressiveFire":"OpenUpE",
-"100_Commands/GetInThatVehiclePilot":"Pilot",
+"100_Commands/OnYourFeet":"StandUp",
+#"100_Commands/PatchYourself.ogg":"",
+"100_Commands/PointersOff.ogg":"LasersOff",
+"100_Commands/PointersOn.ogg":"LasersOn",
+#"100_Commands/PrepareForContact.ogg":"",
 "100_Commands/PutOutThatFire":"PutOutThatFire",
+"100_Commands/RallyUp":"Follow",
 "100_Commands/Rearm":"RearmAt",
 "100_Commands/Regroup":"RegroupE",
+"100_Commands/Relax":"AtEase",
+"100_Commands/RepairThatVehicle":"RepairThat",
+"100_Commands/RepairTheVehicle":"RepairThat",
 "100_Commands/RequestingSupport":"RequestingSupportTo",
 "100_Commands/ReturnToFormation":"ReturnToFormationE",
-"100_Commands/VehBackward_1":"Reverse",
-"100_Commands/VehRight_1":"Right",
-"100_Commands/VehRight_2":"Right",
-"100_Commands/VehRight_3":"Right",
+#"100_Commands/RoundsComplete":"",
+"100_Commands/Safe_1":"AtEase",
+"100_Commands/Safe_2":"AtEase",
 "100_Commands/ScanHorizon":"ScanHorizon",
 "100_Commands/SetCharge":"SetACharge",
 "100_Commands/SetTheTimer":"SetTheTimer",
-"100_Commands/VehSlow_1":"Slow",
-"100_Commands/VehSlow_2":"Slow",
+"100_Commands/Silence":"Stealth",
 "100_Commands/StayAlert":"StayAlert",
 "100_Commands/StayBack":"StayBack",
-"100_Commands/CommStealth":"Stealth",
+"100_Commands/StayInFormation":"ReturnToFormationE",
+"100_Commands/StayLow":"Stealth",
 "100_Commands/Stop":"StopE",
+"100_Commands/SuppressiveFire":"OpenUpE",
+"100_Commands/SwitchToCommander":"Commander",
+"100_Commands/SwitchToDriver":"Driver",
+"100_Commands/SwitchToGunner":"Gunner",
+"100_Commands/TakeCover":"TakeCoverE",
+#"100_Commands/TakeThatMagazine":"",
+#"100_Commands/TakeThatMine":"",
+#"100_Commands/TakeThatPack":"",
+#"100_Commands/TakeThatWeapon":"",
+#"100_Commands/TakeTheMagazine":"",
+#"100_Commands/TakeTheWeapon":"",
+"100_Commands/VehBackward_1":"Reverse",
+"100_Commands/VehFast_1":"Fast",
+"100_Commands/VehFast_2":"Fast",
+"100_Commands/VehFast_3":"Fast",
+"100_Commands/VehForward_1":"Forward",
+"100_Commands/VehForward_2":"Forward",
+"100_Commands/VehLeft_1":"Left",
+"100_Commands/VehLeft_2":"Left",
+"100_Commands/VehLeft_3":"Left",
+"100_Commands/VehRight_1":"Right",
+"100_Commands/VehRight_2":"Right",
+"100_Commands/VehRight_3":"Right",
+"100_Commands/VehSlow_1":"Slow",
+"100_Commands/VehSlow_2":"Slow",
 "100_Commands/VehStop_1":"StopE",
 "100_Commands/VehStop_2":"StopE",
 "100_Commands/VehStop_3":"StopE",
-"100_Commands/TakeCoverE":"TakeCoverE",
+"100_Commands/WatchThatTarget":"ObserveThat",
 "100_Commands/WeaponsFree":"WeaponsFree",
+
 }
 DEFAULT_110_Com_Announce = {
 "110_Com_Announce/AreaClear":"AreaClear",
+"110_Com_Announce/AwaitingOrders":"Waiting",
 "110_Com_Announce/Clear":"Clear",
 "110_Com_Announce/EyesOnTarget":"EyesOnTarget",
 "110_Com_Announce/HeIsDown":"HesDownE",
 "110_Com_Announce/HostileDown":"HostileDownE",
+"110_Com_Announce/IAmReady":"Ready",
+"110_Com_Announce/IVeGotHim":"IveGotHimE",
 "110_Com_Announce/IAmTheNewActual":"ImTheNewActual",
 "110_Com_Announce/HeIsDown":"IveGotHimE",
 "110_Com_Announce/Ready":"Ready",
 "110_Com_Announce/ReadyToFire":"ReadyToFire",
+"110_Com_Announce/ReadyForOrders":"Ready",
 "110_Com_Announce/ScratchOne":"ScratchOneE",
 "110_Com_Announce/StandingBy":"StandingBy",
 "110_Com_Announce/TakingCommand":"TakingCommand",
 "110_Com_Announce/TargetAcquired":"TargetAcquired",
 "110_Com_Announce/TargetEliminated":"TargetEliminated",
 "110_Com_Announce/TargetInSight":"TargetInSight",
+"110_Com_Announce/TargetIsDown":"TargetEliminated",
+"110_Com_Announce/TargetIsNeutralized":"TargetEliminated",
 "110_Com_Announce/Waiting":"Waiting",
 }
 DEFAULT_120_Com_Ask = {
 "120_Com_Ask/RepeatLastOver":"RepeatLast",
-"120_Com_Ask/ReportPosition":"ReportPositionE",
 "120_Com_Ask/ReportIn":"ReportStatus",
+"120_Com_Ask/ReportPosition":"ReportPositionE",
 "120_Com_Ask/SayAgainOver":"SayAgain",
+"120_Com_Ask/Sitrep":"ReportStatus",
 "120_Com_Ask/WhatIsYourLocationQ":"WhereAreYouQ",
 }
 DEFAULT_130_Com_Reply = {
 "130_Com_Reply/Attacking":"AttackingE",
+"130_Com_Reply/CannotComply_1":"Negative",
+"130_Com_Reply/CannotComply_2":"Negative",
 "130_Com_Reply/CannotFire":"CannotFire",
+"130_Com_Reply/CantGetThere":"Negative",
 "130_Com_Reply/Confirmation1_1":"Copy",
+"130_Com_Reply/Confirmation1_10":"Copy",
 "130_Com_Reply/Confirmation1_2":"SolidCopy",
 "130_Com_Reply/Confirmation1_3":"Understood",
-#"130_Com_Reply/Confirmation1_4":"Copy",
-#"130_Com_Reply/Confirmation1_5":"Copy",
-#"130_Com_Reply/Confirmation1_6":"Copy",
-#"130_Com_Reply/Confirmation1_7":"Copy",
-#"130_Com_Reply/Confirmation1_8":"Copy",
-#"130_Com_Reply/Confirmation1_9":"Copy",
-#"130_Com_Reply/Confirmation1_10":"Copy",
+"130_Com_Reply/Confirmation1_4":"Copy",
+"130_Com_Reply/Confirmation1_5":"SolidCopy",
+"130_Com_Reply/Confirmation1_6":"Understood",
+"130_Com_Reply/Confirmation1_7":"Copy",
+"130_Com_Reply/Confirmation1_8":"SolidCopy",
+"130_Com_Reply/Confirmation1_9":"Understood",
+"130_Com_Reply/Confirmation2_1":"Roger",
+"130_Com_Reply/Confirmation2_10":"Roger",
+"130_Com_Reply/Confirmation2_2":"SolidCopy",
+"130_Com_Reply/Confirmation2_3":"Understood",
+"130_Com_Reply/Confirmation2_4":"Roger",
+"130_Com_Reply/Confirmation2_5":"SolidCopy",
+"130_Com_Reply/Confirmation2_6":"Understood",
+"130_Com_Reply/Confirmation2_7":"Roger",
+"130_Com_Reply/Confirmation2_8":"SolidCopy",
+"130_Com_Reply/Confirmation2_9":"Understood",
+"130_Com_Reply/CopyIAmOnHim":"Copy",
 "130_Com_Reply/Engaging":"EngagingE",
 "130_Com_Reply/EngagingTarget":"EngagingTargetE",
+"130_Com_Reply/NegativeCantMakeItThere":"Negative",
 "130_Com_Reply/Negative_1":"Negative",
-#"130_Com_Reply/Negative_2":"Negative",
-#"130_Com_Reply/Negative_3":"Negative",
+"130_Com_Reply/Negative_2":"Negative",
+"130_Com_Reply/Negative_3":"Negative",
 "130_Com_Reply/NoCanDo_1":"NoCanDo",
-#"130_Com_Reply/NoCanDo_2":"NoCanDo",
+"130_Com_Reply/NoCanDo_2":"NoCanDo",
+"130_Com_Reply/OnTheMove":"OnTheWay",
 "130_Com_Reply/OnTheWay_1":"OnTheWay",
-#"130_Com_Reply/OnTheWay_2":"OnTheWay",
-#"130_Com_Reply/OnTheWay_3":"OnTheWay",
-"130_Com_Reply/Confirmation2_1":"Roger",
-#"130_Com_Reply/Confirmation2_2":"Roger",
-#"130_Com_Reply/Confirmation2_3":"Roger",
-#"130_Com_Reply/Confirmation2_4":"Roger",
-#"130_Com_Reply/Confirmation2_5":"Roger",
-#"130_Com_Reply/Confirmation2_6":"Roger",
-#"130_Com_Reply/Confirmation2_7":"Roger",
-#"130_Com_Reply/Confirmation2_8":"Roger",
-#"130_Com_Reply/Confirmation2_9":"Roger",
-#"130_Com_Reply/Confirmation2_10":"Roger",
+"130_Com_Reply/OnTheWay_2":"OnTheWay",
+"130_Com_Reply/OnTheWay_3":"OnTheWay",
+"130_Com_Reply/Supporting":"Copy",
+"130_Com_Reply/Suppressing_1":"combat/CS_SuppresiveFireE",
+"130_Com_Reply/Suppressing_2":"combat/CS_SuppresiveFireE",
 }
+
 DEFAULT_140_Com_Status = {
-"140_Com_Status/FuelLow_1":"BingoFuel",
-"140_Com_Status/FuelLow_2":"BingoFuel",
-"140_Com_Status/CriticalDamage_1":"CriticalDamageE",
-"140_Com_Status/CriticalDamage_2":"CriticalDamageE",
-"140_Com_Status/HealthInjured":"Injured",
-"140_Com_Status/HeIsDeadE":"IsDead",
-"140_Com_Status/HeIsHitE":"IsDownE",
-"140_Com_Status/HealthMedic":"MedicE",
-"140_Com_Status/HealthNeedMedicNow":"MedicE",
-"140_Com_Status/HealthINeedHelpNow":"NeedHelpE",
 "140_Com_Status/AmmoCritical_1":"NoMoreAmmoE",
 "140_Com_Status/AmmoCritical_2":"OutOfAmmoE",
 "140_Com_Status/AmmoCritical_3":"NoMoreAmmoE",
 "140_Com_Status/AmmoLow":"RunningOutOfAmmo",
 "140_Com_Status/FuelCritical_1":"OutOfFuelE",
-"140_Com_Status/FuelCritical_2":"RunningOutOfFuel",
-"140_Com_Status/HealthINeedSomeHelpHere":"SomebodyHelpMeE",
+"140_Com_Status/FuelCritical_2":"OutOfFuelE",
+"140_Com_Status/FuelLow_1":"BingoFuel",
+"140_Com_Status/FuelLow_2":"RunningOutOfFuel",
+"140_Com_Status/CriticalDamage_1":"CriticalDamageE",
+"140_Com_Status/CriticalDamage_2":"StatusRedE",
+"140_Com_Status/HealthIAmBadlyHurt":"Injured",
 "140_Com_Status/HealthIAmWounded":"WoundedE",
+"140_Com_Status/HealthINeedHelpNow":"NeedHelpE",
+"140_Com_Status/HealthINeedSomeHelpHere":"SomebodyHelpMeE",
+"140_Com_Status/HealthInjured":"Injured",
+"140_Com_Status/HealthMedic":"MedicE",
+"140_Com_Status/HealthNeedMedicNow":"MedicE",
+"140_Com_Status/HealthNeedHelp":"NeedHelpE",
+"140_Com_Status/HealthSomebodyHelpMe":"SomebodyHelpMeE",
+"140_Com_Status/HealthWounded":"WoundedE",
+"140_Com_Status/HeIsDeadE":"IsDead",
+"140_Com_Status/HeIsHitE":"IsDownE",
+"140_Com_Status/ManDownE_1":"IsDownE",
+"140_Com_Status/ManDownE_2":"IsDownE",
+"140_Com_Status/ManDownE_3":"IsDownE",
+#"140_Com_Status/OutOfFirstAidKits_1":"",
+#"140_Com_Status/OutOfFirstAidKits_2":"",
+"140_Com_Status/WeGotAManDownE_1":"IsDownE",
+"140_Com_Status/WeGotAManDownE_2":"IsDownE",
+"140_Com_Status/WeGotAManDownE_3":"IsDownE",
+"140_Com_Status/WeLostOneE_1":"IsDead",
+"140_Com_Status/WeLostOneE_2":"IsDead",
+"140_Com_Status/WeLostOneE_3":"IsDead",
 }
 DEFAULT_150_Reporting = {
 "150_Reporting/EnemyDetected_1":"HostilesE",
 "150_Reporting/EnemyDetected_2":"combat/CS_HostilesE",
-#"150_Reporting/EnemyDetected_3":"HostilesE",
-#"150_Reporting/EnemyDetected_4":"HostilesE",
-#"150_Reporting/EnemyDetected_5":"HostilesE",
-#"150_Reporting/EnemyDetected_6":"HostilesE",
-#"150_Reporting/EnemyDetected_7":"HostilesE",
-#"150_Reporting/EnemyDetected_8":"HostilesE",
-#"150_Reporting/EnemyDetected_9":"HostilesE",
-#"150_Reporting/EnemyDetected_10":"HostilesE",
+"150_Reporting/EnemyDetected_3":"HostilesE",
+"150_Reporting/EnemyDetected_4":"combat/CS_HostilesE",
+"150_Reporting/EnemyDetected_5":"HostilesE",
+"150_Reporting/EnemyDetected_6":"combat/CS_HostilesE",
+"150_Reporting/EnemyDetected_7":"HostilesE",
+"150_Reporting/EnemyDetected_8":"combat/CS_HostilesE",
+"150_Reporting/EnemyDetected_9":"HostilesE",
+"150_Reporting/EnemyDetected_10":"combat/CS_HostilesE",
 "150_Reporting/BombDetected_1":"weapons/Bombs",
 "150_Reporting/MineDetected_1":"weapons/Mine",
 "150_Reporting/ExplosiveDetected_1":"weapons/Charge",
@@ -408,21 +486,44 @@ CLOCKFACING_DirectionRelative3 = {
 }
 
 DEFAULT_200_CombatShouts = {
-"200_CombatShouts/ContactE":"combat/CS_ContactE",
+#"200_CombatShouts/CheeringE_1":"",
+"200_CombatShouts/ContactE_1":"combat/CS_ContactE",
+"200_CombatShouts/ContactE_2":"ContactE",
 "200_CombatShouts/CoveringE_1":"combat/CS_CoveringFireE",
 "200_CombatShouts/CoveringE_2":"combat/CS_CoveringGoE",
 "200_CombatShouts/CoveringE_3":"combat/CS_GoILLCoverE",
 "200_CombatShouts/CoveringE_4":"combat/CS_GoImCoveringE",
-"200_CombatShouts/CoverMeE":"combat/CS_CoverMeE",
+"200_CombatShouts/CoveringE_5":"combat/CS_CoveringFireE",
+"200_CombatShouts/CoveringE_6":"combat/CS_CoveringGoE",
+"200_CombatShouts/CoveringE_7":"combat/CS_GoILLCoverE",
+"200_CombatShouts/CoverMeE_1":"combat/CS_CoverMeE",
+"200_CombatShouts/CoverMeE_2":"combat/CS_CoverMeE",
+"200_CombatShouts/CoverMeE_3":"combat/CS_CoverMeE",
+"200_CombatShouts/CoverMeE_4":"combat/CS_CoverMeE",
+"200_CombatShouts/EndangeredE_1":"WeLost",
+"200_CombatShouts/EndangeredE_2":"WeLost",
+"200_CombatShouts/IncomingGrenadeE_1":"weapons/Grenade",
+"200_CombatShouts/IncomingGrenadeE_2":"weapons/Grenade",
+"200_CombatShouts/IncomingGrenadeE_3":"weapons/Grenade",
 "200_CombatShouts/ReloadingE_1":"combat/CS_ReloadingE",
 "200_CombatShouts/ReloadingE_2":"combat/CS_ChangingMagsE",
 "200_CombatShouts/ReloadingE_3":"combat/CS_CoverMeWhileIReloadE",
 "200_CombatShouts/ReloadingE_4":"combat/CS_IgottaReloadE",
+"200_CombatShouts/ReloadingE_5":"combat/CS_ReloadingE",
+"200_CombatShouts/ReloadingE_6":"combat/CS_ChangingMagsE",
+"200_CombatShouts/ReloadingE_7":"combat/CS_CoverMeWhileIReloadE",
 "200_CombatShouts/SuppressingE_1":"combat/CS_SuppresiveFireE",
+"200_CombatShouts/SuppressingE_2":"combat/CS_SuppresiveFireE",
 "200_CombatShouts/ThrowingGrenadeE_1":"combat/CS_FireInTheHoleE",
+"200_CombatShouts/ThrowingGrenadeE_2":"combat/CS_FireInTheHoleE",
 "200_CombatShouts/ThrowingSmokeE_1":"weapons/Smoke",
+"200_CombatShouts/ThrowingSmokeE_2":"weapons/Smoke",
 "200_CombatShouts/UnderFireE_1":"UnderFireE",
 "200_CombatShouts/UnderFireE_2":"TakingFireE",
+"200_CombatShouts/UnderFireE_3":"UnderFireE",
+"200_CombatShouts/UnderFireE_4":"TakingFireE",
+"200_CombatShouts/UnderFireE_5":"UnderFireE",
+"200_CombatShouts/UnderFireE_6":"TakingFireE",
 "200_CombatShouts/WitnessKilledE_1":"HesDownE",
 #"200_CombatShouts/":"combat/CS_GoE",
 #"200_CombatShouts/":"combat/CS_HostilesE",
@@ -436,21 +537,21 @@ DEFAULT_200_CombatShouts = {
 
 DIRECTION_DirectionCompass1 = {
 "DirectionCompass1/east_1":"East",
+"DirectionCompass1/east_2":"East",
 "DirectionCompass1/northEast_1":"Northeast",
-"DirectionCompass1/north_1":"North",
+"DirectionCompass1/northEast_2":"Northeast",
 "DirectionCompass1/northWest_1":"Northwest",
+"DirectionCompass1/northWest_2":"Northwest",
+"DirectionCompass1/north_1":"North",
+"DirectionCompass1/north_2":"North",
 "DirectionCompass1/southEast_1":"Southeast",
-"DirectionCompass1/south_1":"South",
+"DirectionCompass1/southEast_2":"Southeast",
 "DirectionCompass1/southWest_1":"Southwest",
+"DirectionCompass1/southWest_2":"Southwest",
+"DirectionCompass1/south_1":"South",
+"DirectionCompass1/south_2":"South",
 "DirectionCompass1/west_1":"West",
-#"East":"DirectionCompass1/east_2",
-#"Northeast":"DirectionCompass1/northEast_2",
-#"North":"DirectionCompass1/north_2",
-#"Northwest":"DirectionCompass1/northWest_2",
-#"Southeast":"DirectionCompass1/southEast_2",
-#"South":"DirectionCompass1/south_2",
-#"Southwest":"DirectionCompass1/southWest_2",
-#"West":"DirectionCompass1/west_2",
+"DirectionCompass1/west_2":"West",
 }
 DEFAULT_DirectionCompass2 = {
 "DirectionCompass2/bearing000":"direction/North",
@@ -593,6 +694,124 @@ TEAM_030_Teams = {
 }
 
 VEHICLES_010_Vehicles = {
+"010_Vehicles/veh_air_gunship_p":"gunships",
+"010_Vehicles/veh_air_gunship_s":"gunship",
+"010_Vehicles/veh_air_p":"aircrafts",
+"010_Vehicles/veh_air_parachute_p":"parachutes",
+"010_Vehicles/veh_air_parachute_s":"parachute",
+"010_Vehicles/veh_air_s":"aircraft",
+"010_Vehicles/veh_air_uav_p":"UAVs",
+"010_Vehicles/veh_air_uav_s":"UAV",
+"010_Vehicles/veh_air_plane_s":"aircraft",
+"010_Vehicles/veh_air_plane_p":"aircrafts",
+"010_Vehicles/veh_helicopter_p":"helicopters",
+"010_Vehicles/veh_helicopter_s":"helicopter",
+"010_Vehicles/veh_infantry_AA_p":"launcherSoldiers",
+"010_Vehicles/veh_infantry_AA_s":"launcherSoldier",
+"010_Vehicles/veh_infantry_AT_p":"launcherSoldiers",
+"010_Vehicles/veh_infantry_AT_s":"launcherSoldier",
+"010_Vehicles/veh_infantry_civilian_p":"men",
+"010_Vehicles/veh_infantry_civilian_s":"man",
+"010_Vehicles/veh_infantry_diver_p":"SpecialForce",
+"010_Vehicles/veh_infantry_diver_s":"SpecialForce",
+"010_Vehicles/veh_infantry_MG_p":"Mgunners",
+"010_Vehicles/veh_infantry_MG_s":"MGunner",
+"010_Vehicles/veh_infantry_SF_p":"SpecialForces",
+"010_Vehicles/veh_infantry_SF_s":"SpecialForce",
+"010_Vehicles/veh_infantry_Sniper_p":"Snipers",
+"010_Vehicles/veh_infantry_Sniper_s":"Sniper",
+"010_Vehicles/veh_infantry_medic_p":"Medics",
+"010_Vehicles/veh_infantry_medic_s":"Medic",
+"010_Vehicles/veh_infantry_officer_p":"officers",
+"010_Vehicles/veh_infantry_officer_s":"officer",
+"010_Vehicles/veh_infantry_p_1":"soldiers",
+"010_Vehicles/veh_infantry_p_2":"soldiers",
+"010_Vehicles/veh_infantry_p_3":"soldiers",
+"010_Vehicles/veh_infantry_pilot_p":"pilots",
+"010_Vehicles/veh_infantry_pilot_s":"pilot",
+"010_Vehicles/veh_infantry_s_1":"soldier",
+"010_Vehicles/veh_infantry_s_2":"soldier",
+"010_Vehicles/veh_infantry_s_3":"soldier",
+"010_Vehicles/veh_ship_attackBoat_p":"boats",
+"010_Vehicles/veh_ship_attackBoat_s":"boat",
+"010_Vehicles/veh_ship_boat_p":"boats",
+"010_Vehicles/veh_ship_boat_s":"boat",
+"010_Vehicles/veh_ship_p":"ships",
+"010_Vehicles/veh_ship_s":"ship",
+"010_Vehicles/veh_ship_submarine_p":"ship",
+"010_Vehicles/veh_ship_submarine_s":"ship",
+"010_Vehicles/veh_static_AA_p":"staticAALaunchers",
+"010_Vehicles/veh_static_AA_p":"staticATLaunchers",
+"010_Vehicles/veh_static_AA_s":"staticAALauncher",
+"010_Vehicles/veh_static_AA_s":"staticATLauncher",
+"010_Vehicles/veh_static_cannon_p":"staticCannons",
+"010_Vehicles/veh_static_cannon_s":"staticCannon",
+"010_Vehicles/veh_static_GL_p":"staticgrenadelaunchers",
+"010_Vehicles/veh_static_GL_s":"staticgrenadelauncher",
+"010_Vehicles/veh_Static_MG_p":"StaticMGWeapons",
+"010_Vehicles/veh_Static_MG_s":"StaticMGWeapon",
+"010_Vehicles/veh_Static_mortar_p":"StaticMortars",
+"010_Vehicles/veh_Static_mortar_s":"StaticMortar",
+"010_Vehicles/veh_static_p":"staticLaunchers",
+"010_Vehicles/veh_static_s":"staticLaunchers",
+"010_Vehicles/veh_unknown_p":"vehicles",
+"010_Vehicles/veh_unknown_s":"vehicle",
+"010_Vehicles/veh_vehicle_APC_p":"APCs",
+"010_Vehicles/veh_vehicle_APC_s":"APC",
+"010_Vehicles/veh_vehicle_armor_p":"vehicles",#touchup raskaita+ajoneuvoja
+"010_Vehicles/veh_vehicle_armor_s":"vehicle",#touchup raskas+ajoneuvo
+"010_Vehicles/veh_vehicle_armedcar_p":"technicals",
+"010_Vehicles/veh_vehicle_armedcar_s":"technical",
+"010_Vehicles/veh_vehicle_car_p":"cars",
+"010_Vehicles/veh_vehicle_car_s":"car",
+"010_Vehicles/veh_vehicle_mrap_p":"technicals",#touchup raskaita+ajoneuvoja
+"010_Vehicles/veh_vehicle_mrap_s":"technical",#touchup raskas+ajoneuvo
+"010_Vehicles/veh_vehicle_p":"vehicles",
+"010_Vehicles/veh_vehicle_s":"vehicle",
+"010_Vehicles/veh_vehicle_tank_p":"tanks",
+"010_Vehicles/veh_vehicle_tank_s":"tank",
+"010_Vehicles/veh_vehicle_truck_p":"trucks",
+"010_Vehicles/veh_vehicle_truck_s":"truck",
+"010_Vehicles/veh_vehicle_ugv_p":"vehicles",#touchup ???
+"010_Vehicles/veh_vehicle_ugv_s":"vehicle",#touchup ??? not a vehicle 
+}
+
+VEHICLES_ENGAGE = {
+"veh_air_s":"aircraft",
+"veh_plane_s":"airplane",
+"veh_vehicle_APC_s":"APC",
+"veh_ship_boat_s":"boat",
+"veh_vehicle_car_s":"car",
+"veh_air_gunship_s":"gunship",
+"veh_helicopter_s":"helicopter",
+"veh_infantry_AA_s":"launcherSoldier",
+"veh_infantry_AT_s":"launcherSoldier",
+"veh_infantry_medic_s":"Medic",
+"veh_infantry_MG_s":"MGunner",
+"veh_infantry_officer_s":"officer",
+"veh_air_parachute_s":"parachute",
+"veh_infantry_pilot_s":"pilot",
+"veh_ship_s":"ship",
+"veh_submarine_s":"ship",
+"veh_infantry_Sniper_s":"Sniper",
+"veh_infantry_s_1":"soldier",
+"veh_infantry_s_2":"soldier",
+"veh_infantry_s_3":"soldier",
+"veh_infantry_SF_s":"SpecialForce",
+"veh_static_AA_s":"staticAALauncher",
+"veh_static_AA_s":"staticATLauncher",
+"veh_static_cannon_s":"staticCannon",
+"veh_static_GL_s":"staticgrenadelauncher",
+"veh_Static_MG_s":"StaticMGWeapon",
+"veh_Static_mortar_s":"StaticMortar",
+"veh_vehicle_tank_s":"tank",
+"veh_vehicle_armedcar_s":"technical",
+"veh_vehicle_truck_s":"truck",
+"veh_air_uav_s":"UAV",
+"veh_vehicle_s":"vehicle",
+}
+
+VEHICLES_CONTACT = {
 "010_Vehicles/veh_air_s":"aircraft",
 "010_Vehicles/veh_air_p":"aircrafts",
 "010_Vehicles/veh_plane_s":"airplane",
@@ -628,7 +847,11 @@ VEHICLES_010_Vehicles = {
 "010_Vehicles/veh_infantry_Sniper_s":"Sniper",
 "010_Vehicles/veh_infantry_Sniper_p":"Snipers",
 "010_Vehicles/veh_infantry_s_1":"soldier",
+"010_Vehicles/veh_infantry_s_2":"soldier",
+"010_Vehicles/veh_infantry_s_3":"soldier",
 "010_Vehicles/veh_infantry_p_1":"soldiers",
+"010_Vehicles/veh_infantry_p_2":"soldiers",
+"010_Vehicles/veh_infantry_p_3":"soldiers",
 "010_Vehicles/veh_infantry_SF_s":"SpecialForce",
 "010_Vehicles/veh_infantry_SF_p":"SpecialForces",
 "010_Vehicles/veh_static_AA_s":"staticAALauncher",
@@ -654,39 +877,6 @@ VEHICLES_010_Vehicles = {
 "010_Vehicles/veh_air_uav_p":"UAVs",
 "010_Vehicles/veh_vehicle_s":"vehicle",
 "010_Vehicles/veh_vehicle_p":"vehicles",
-}
-
-VEHICLES_ENGAGE = {
-"veh_air_s":"aircraft",
-"veh_plane_s":"airplane",
-"veh_vehicle_APC_s":"APC",
-"veh_ship_boat_s":"boat",
-"veh_vehicle_car_s":"car",
-"veh_air_gunship_s":"gunship",
-"veh_helicopter_s":"helicopter",
-"veh_infantry_AA_s":"launcherSoldier",
-"veh_infantry_AT_s":"launcherSoldier",
-"veh_infantry_medic_s":"Medic",
-"veh_infantry_MG_s":"MGunner",
-"veh_infantry_officer_s":"officer",
-"veh_air_parachute_s":"parachute",
-"veh_infantry_pilot_s":"pilot",
-"veh_ship_s":"ship",
-"veh_submarine_s":"ship",
-"veh_infantry_Sniper_s":"Sniper",
-"veh_infantry_s_1":"soldier",
-"veh_infantry_SF_s":"SpecialForce",
-"veh_static_AA_s":"staticAALauncher",
-"veh_static_AA_s":"staticATLauncher",
-"veh_static_cannon_s":"staticCannon",
-"veh_static_GL_s":"staticgrenadelauncher",
-"veh_Static_MG_s":"StaticMGWeapon",
-"veh_Static_mortar_s":"StaticMortar",
-"veh_vehicle_tank_s":"tank",
-"veh_vehicle_armedcar_s":"technical",
-"veh_vehicle_truck_s":"truck",
-"veh_air_uav_s":"UAV",
-"veh_vehicle_s":"vehicle",
 }
 
 WEAPONS_005_Weapons = {
@@ -721,30 +911,55 @@ WEAPONS_005_Weapons = {
 }
 DISTANCE_DistanceAbsolute1 = {
 "DistanceAbsolute1/dist1000_1":"distance/dist1000",
+"DistanceAbsolute1/dist1000_2":"distance/dist1000",
+"DistanceAbsolute1/dist1000_3":"distance/dist1000",
 "DistanceAbsolute1/dist2000_1":"distance/dist2000",
+"DistanceAbsolute1/dist2000_2":"distance/dist2000",
+"DistanceAbsolute1/dist2000_3":"distance/dist2000",
 "DistanceAbsolute1/dist2500_1":"distance/distFar", #touchup, does not match
+"DistanceAbsolute1/dist2500_2":"distance/distFar", #touchup, does not match
+"DistanceAbsolute1/dist2500_3":"distance/distFar", #touchup, does not match
 "DistanceAbsolute1/dist800_1":"distance/dist1000", #touchup, does not match
+"DistanceAbsolute1/dist800_2":"distance/dist1000", #touchup, does not match
+"DistanceAbsolute1/dist800_3":"distance/dist1000", #touchup, does not match
 "DistanceAbsolute1/dist1500_1":"distance/dist2000", #touchup, does not match
+"DistanceAbsolute1/dist1500_2":"distance/dist2000", #touchup, does not match
+"DistanceAbsolute1/dist1500_3":"distance/dist2000", #touchup, does not match
 }
 DISTANCE_DistanceAbsolute1_CONCAT = {
 "DistanceAbsolute1/dist100_1":"distance/dist100",
+"DistanceAbsolute1/dist100_2":"distance/dist100",
+"DistanceAbsolute1/dist100_3":"distance/dist100",
 "DistanceAbsolute1/dist200_1":"distance/dist200",
-"DistanceAbsolute1/dist500_1":"distance/dist500",
-"DistanceAbsolute1/dist75_1":"distance/dist50", #touchup, does not match
+"DistanceAbsolute1/dist200_2":"distance/dist200",
+"DistanceAbsolute1/dist200_3":"distance/dist200",
 "DistanceAbsolute1/dist300_1":"distance/dist200", #touchup, does not match
+"DistanceAbsolute1/dist300_2":"distance/dist200", #touchup, does not match
+"DistanceAbsolute1/dist300_3":"distance/dist200", #touchup, does not match
 "DistanceAbsolute1/dist400_1":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist400_2":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist400_3":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist500_1":"distance/dist500",
+"DistanceAbsolute1/dist500_2":"distance/dist500",
 "DistanceAbsolute1/dist600_1":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist600_2":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist600_3":"distance/dist500", #touchup, does not match
 "DistanceAbsolute1/dist700_1":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist700_2":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist700_3":"distance/dist500", #touchup, does not match
+"DistanceAbsolute1/dist75_1":"distance/dist50", #touchup, does not match
+"DistanceAbsolute1/dist75_2":"distance/dist50", #touchup, does not match
+"DistanceAbsolute1/dist75_3":"distance/dist50", #touchup, does not match
 }
-DISTANCE_040_MoveDistanceAbsolute1_CONCAT = {
-"040_MoveDistanceAbsolute1/dist100_1":"distance/dist100",
-"040_MoveDistanceAbsolute1/dist200_1":"distance/dist200",
-"040_MoveDistanceAbsolute1/dist500_1":"distance/dist500",
-"040_MoveDistanceAbsolute1/dist75_1":"distance/dist50", #touchup, does not match
-"040_MoveDistanceAbsolute1/dist300_1":"distance/dist200", #touchup, does not match
-"040_MoveDistanceAbsolute1/dist400_1":"distance/dist500", #touchup, does not match
-"040_MoveDistanceAbsolute1/dist600_1":"distance/dist500", #touchup, does not match
-"040_MoveDistanceAbsolute1/dist700_1":"distance/dist500", #touchup, does not match
+DISTANCE_040_MoveDistanceAbsolute1_CONCAT = {#todo move one kilometer etc
+"040_MoveDistanceAbsolute1/move_dist100":"distance/dist100",
+"040_MoveDistanceAbsolute1/move_dist200":"distance/dist200",
+"040_MoveDistanceAbsolute1/move_dist500":"distance/dist500",
+"040_MoveDistanceAbsolute1/move_dist75":"distance/dist50", #touchup, does not match
+"040_MoveDistanceAbsolute1/move_dist300":"distance/dist200", #touchup, does not match
+"040_MoveDistanceAbsolute1/move_dist400":"distance/dist500", #touchup, does not match
+"040_MoveDistanceAbsolute1/move_dist600":"distance/dist500", #touchup, does not match
+"040_MoveDistanceAbsolute1/move_dist700":"distance/dist500", #touchup, does not match
 }
 DEFAULT_070_MoveDirectionRelative1 = {
 "070_MoveDirectionRelative1/moveBack_1":"Reverse",
@@ -753,8 +968,8 @@ DEFAULT_070_MoveDirectionRelative1 = {
 "070_MoveDirectionRelative1/moveLeft_2":"Left",
 "070_MoveDirectionRelative1/moveRight_1":"Right",
 "070_MoveDirectionRelative1/moveRight_2":"Right",
-"070_MoveDirectionRelative1/moveUp_1":"Advance",
-"070_MoveDirectionRelative1/moveUp_2":"Advance",
+"070_MoveDirectionRelative1/moveUp_1":"Forward",
+"070_MoveDirectionRelative1/moveUp_2":"Forward",
 }
 TWICE = {"_1","_2"}
 FILETYPES = {".ogg",".lip"}
@@ -763,7 +978,7 @@ STATES_CONTACT = {"CombatContact","NormalContact"}
 STATES_ENGAGE = {"NormalEngage","CombatEngage","StealthEngage"}
 STATES_TARGET = {"NormalTarget"}
 STATES_DirectionRelative2 = {"Combat","CombatEngage","Normal","NormalEngage","NormalTarget","Stealth","StealthEngage"}
-STATES_NUMBERSGRID = {"Combat","CombatEngage","Normal","NormalEngage","Stealth","StealthEngage"}
+STATES_NUMBERSGRID = {"Combat","CombatEngage","Normal","NormalEngage","NormalTarget","Stealth","StealthEngage"}
 STATES_TEAMS = {"Combat","CombatEngage","Normal","NormalEngage","NormalTarget","NormalWatch","Stealth","StealthEngage","StealthWatch"}
 STATES_080_MoveAlphabet = {"Normal","Stealth"}
 STATES_ALL = {"Combat","CombatContact","CombatEngage","Normal","NormalContact","NormalEngage","NormalTarget","NormalWatch","Stealth","StealthEngage","StealthWatch"}
@@ -774,13 +989,13 @@ def concatenate_audio_moviepy(path1, path2, output_path):
 	first = AudioFileClip(path1) 
 	last = AudioFileClip(path2)
 	final_clip = concatenate_audioclips([first,last])
-	final_clip.write_audiofile(output_path)
+	final_clip.write_audiofile(output_path, logger=None, verbose=False)
 def concatenate_audio_moviepy_three(path1, path2, path3, output_path):
 	first = AudioFileClip(path1) 
 	second = AudioFileClip(path2)
 	third = AudioFileClip(path3)
 	final_clip = concatenate_audioclips([first,second,third])
-	final_clip.write_audiofile(output_path)
+	final_clip.write_audiofile(output_path, logger=None, verbose=False)
 def checkdirs():
     print("Checking directories")
     global DIR_CHECK_RESULT
@@ -909,6 +1124,9 @@ def convert_preview():
 	global A3_BASE
 	shutil.copyfile(A2_DIR + "default/RepeatLast.ogg", A3_BASE + "preview.ogg")
 
+print ("----------------------------------------------------------------")
+print("Input: " + A2_DIR)
+print("Output: " + A3_BASE)
 print("Creating directories...")
 createdirs(DIRS_Combat, DIRS_CombatContact, DIRS_CombatEngage, DIRS_Normal, DIRS_NormalContact, DIRS_NormalEngage, DIRS_NormalTarget, DIRS_NormalWatch, DIRS_Stealth, DIRS_StealthEngage, DIRS_StealthWatch)
 print("Moving files...")
@@ -975,15 +1193,23 @@ convert(DISTANCE_DistanceAbsolute1,STATES_DistanceAbsolute1, srcfolders[0])
 STATES_070_MoveDirectionRelative1 = {"Combat","Normal","Stealth"}
 convert(DEFAULT_070_MoveDirectionRelative1,STATES_070_MoveDirectionRelative1, srcfolders[0])
 #-----
+STATES_VEHICLES_CONTACT = {"CombatEngage","NormalEngage","StealthEngage"}
+convert_nolip(VEHICLES_CONTACT, STATES_CONTACT, srcfolders[13])
+
+#-----
 STATES_040_MoveDistanceAbsolute1 = {"Combat","Normal","Stealth"}
-print("Concatenating files...")
-concat_040_MoveDistanceAbsolute1()
-concat_DistanceAbsolute1()
 convert_clockfacing()
 convert_030_Teams()
-concat_Contact_010_Vehicles()
+print("Concatenating files... 1/6")
+concat_040_MoveDistanceAbsolute1()
+print("Concatenating files... 2/6")
+concat_DistanceAbsolute1()
+print("Concatenating files... 3/6")
 concat_Engage_010_Vehicles()
+print("Concatenating files... 4/6")
 concat_Target_010_Vehicles()
+print("Concatenating files... 5/6")
 concat_035_NumbersGrid()
+print("Concatenating files... 6/6")
 concat_080_MoveAlphabet()
-print("All done!")
+print("Done!")
