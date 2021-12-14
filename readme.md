@@ -16,12 +16,11 @@ Heavily in progress, probably will make a release when it's doing everything it'
 - [x] Grid numbers concat and move
 - [x] Finish up cataloging all the arma 2 sound files and arma3 destinations
 - [x] Convert the files using the script
-- [ ] Collect a list of the sound-files that need to be manually touched up (partially done)
+- [x] Write config.cpp
+- [x] Collect a list of the sound-files that need to be manually touched up
+- [x] Touch up sound files
+- [ ] Catalogue missing files from the source folders and write instructions on how to address them
 - [ ] Check for compatibility for linux and windows
-- [ ] Write config.cpp
-- [ ] Automate file additions (config.cpp, %PREFIX%, BIS_AddonInfo.hpp, etc.)
-- [ ] Catalogue missing files from the source folders and figure out how to address them
-- [ ] Touch up sound files
 
 # Sound file anomalities 
 Need fixing in the source directory
@@ -54,7 +53,6 @@ Need fixing in the source directory
 
 # Soundfiles touchup needed
 
-
 - DistanceAbsolute1/dist75_1,
 - DistanceAbsolute1/dist300_1
 - DistanceAbsolute1/dist400_1
@@ -63,6 +61,7 @@ Need fixing in the source directory
 - DistanceAbsolute1/dist800_1
 - DistanceAbsolute1/dist1500_1
 - DistanceAbsolute1/dist2500_1
+- a few more
 
 # Destination folder conversion progress
 
